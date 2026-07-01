@@ -1,338 +1,357 @@
 import React from "react";
+import Link from "next/link";
+import Nav from "./components/nav";
+import Footer from "./components/footer";
 import FadeInSection from "./components/fade-in-section";
-import MobileMenu from "./components/mobile-menu";
+import ClientMarquee from "./components/client-marquee";
+
+const BORDER = "border-[rgba(242,237,230,0.07)]!";
+
+const TILE_BG = [
+	"linear-gradient(135deg,#1a0e0a,#5c2e1a,#9c5c30)",
+	"linear-gradient(135deg,#0a1520,#1e3d5c,#3a6080)",
+	"linear-gradient(135deg,#0d1a0d,#2d5230,#5a8a5c)",
+	"linear-gradient(135deg,#1a1208,#5c4820,#a08040)",
+	"linear-gradient(135deg,#1a0a14,#5c2040,#9c3060)",
+	"linear-gradient(135deg,#0a1018,#203050,#405878)",
+	"linear-gradient(135deg,#180e08,#6a3818,#a06030)",
+	"linear-gradient(135deg,#101820,#283858,#485a88)",
+	"linear-gradient(135deg,#0e1a10,#2a4830,#507858)",
+	"linear-gradient(135deg,#180c0a,#603020,#a05840)",
+	"linear-gradient(135deg,#101620,#203058,#3a5080)",
+	"linear-gradient(135deg,#121a12,#345438,#608060)",
+];
+
+const TESTIMONIALS = [
+	{
+		quote: (
+			<>
+				A{" "}
+				<span className="text-accent!">self-motivated creative leader</span>{" "}
+				whose strategic thinking and design execution help us drive
+				consistent growth.
+			</>
+		),
+		name: "Ahmed Al Farsi",
+		role: "Marketing VP · Hospitality Group",
+	},
+	{
+		quote: (
+			<>
+				Vinesh&apos;s{" "}
+				<span className="text-accent!">
+					creative instincts and attention to detail
+				</span>{" "}
+				elevate every project beyond expectations.
+			</>
+		),
+		name: "Priya Menon",
+		role: "Brand Director · Lifestyle Brand",
+	},
+	{
+		quote: (
+			<>
+				He owns the entire{" "}
+				<span className="text-accent!">
+					creative pipeline — web, social, campaigns
+				</span>{" "}
+				— and bridges discipline and strategy without losing momentum.
+			</>
+		),
+		name: "James Carter",
+		role: "CEO · Digital First Agency",
+	},
+	{
+		quote: (
+			<>
+				Fast with visuals,{" "}
+				<span className="text-accent!">sharp with positioning</span>, and
+				always pushing the brand to look more premium.
+			</>
+		),
+		name: "Sara Al Rashid",
+		role: "CMO · F&B Concept",
+	},
+];
 
 export default function Home() {
-  const menuLinks = [
-    { label: "About", href: "#about" },
-    { label: "Work", href: "#work" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
-  ];
+	return (
+		<div className="min-h-screen! bg-bg!">
+			<Nav />
 
-  return (
-    <>
-      {/* Noise overlay */}
-      <div className="grain" />
+			<main>
+				{/* ── HERO ── */}
+				<section className="relative! min-h-screen! flex! flex-col! justify-end! overflow-hidden!">
+					<img
+						src={`/images/hero_bg.jpg`}
+						alt="hero bg"
+						className="absolute! inset-0! z-1!"
+					/>
 
-      {/* Marquee ticker */}
-      <div className="marquee">
-        <span>
-          Brand Design · Creative Marketing · Hospitality Campaigns · AI Visual Direction · Social Content Systems · Pitch Deck Visuals · Brand Design · Creative Marketing · Hospitality Campaigns · AI Visual Direction · Social Content Systems · Pitch Deck Visuals · 
-        </span>
-      </div>
+					{/* Dark gradient overlay */}
+					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(14,18,24,0.3)]! via-[rgba(14,18,24,0.5)]! to-[rgba(14,18,24,0.92)]! z-1!" />
 
-      {/* Navigation Header */}
-      <header>
-        <nav className="nav">
-          <a className="brand" href="#">
-            Vinesh<i>Studio</i>
-          </a>
-          <div className="menu">
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-          </div>
-          {/* Desktop Call to Action */}
-          <div className="nav-cta hidden lg:block">
-            <a className="btn dark" href="#contact">
-              Let’s Connect
-            </a>
-          </div>
-          {/* Mobile hamburger menu */}
-          <MobileMenu links={menuLinks} />
-        </nav>
-      </header>
+					{/* Content */}
+					<div className="relative! z-2! max-w-[1440px]! mx-auto! w-full! px-6! md:px-15! pb-14! md:pb-[60px]! grid! grid-cols-1! md:grid-cols-[1fr_auto]! items-end! gap-8! md:gap-10!">
+						<h1 className="text-[clamp(44px,8.5vw,110px)]! capitalize! font-extrabold! leading-[0.9]! tracking-[-0.03em]! text-ink! max-w-[900px]!">
+							Multi-Disciplinary
+							<br />
+							<span className="text-accent">Creative Leadership</span>
+							<br />
+							That Drives Results
+						</h1>
 
-      <main>
-        {/* Hero Section */}
-        <section className="hero">
-          <div className="hero-grid">
-            <div>
-              <div className="intro">
-                <span className="dot" /> UAE-based creative marketer & brand designer
-              </div>
-              <h1>
-                Building brands from <span>idea</span> to impact
-              </h1>
-              <p className="hero-copy">
-                I shape brand identities, campaign visuals, social systems, pitch decks, and AI-powered creative direction for hospitality, lifestyle, and digital-first businesses.
-              </p>
-              <div className="hero-actions">
-                <a className="btn dark" href="#work">
-                  View Selected Work
-                </a>
-                <a className="btn" href="#services">
-                  What I Do
-                </a>
-              </div>
-            </div>
+						<div className="flex! md:flex-col! items-start! md:items-end! gap-5! md:text-right!">
+							<span className="base! font-semibold! text-white/50! tracking-[0.08em]!">
+								Design with purpose
+							</span>
+							<Link
+								href="/#contact"
+								className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5!"
+							>
+								let&apos;s connect
+							</Link>
+							<Link
+								href="/#contact"
+								className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-white/20! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-white/30! hover:-translate-y-0.5!"
+							>
+								download resume
+							</Link>
+						</div>
+					</div>
+				</section>
 
-            <div className="collage" aria-label="Portfolio visual collage">
-              <div className="tile t1" data-label="Hospitality" />
-              <div className="tile t2" data-label="Digital Product" />
-              <div className="tile t3" data-label="Campaigns" />
-              <div className="tile t4" data-label="AI Visuals" />
-            </div>
-          </div>
-        </section>
+				{/* ── CLIENTS ── */}
+				<FadeInSection>
+					<div
+						className={`border-t! border-b! ${BORDER} py-14! px-6! md:px-15!`}
+					>
+						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-center!">
+							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
+								Clients
+							</span>
+							<div className="w-full! overflow-hidden!">
+								<ClientMarquee />
+							</div>
+						</div>
+					</div>
+				</FadeInSection>
 
-        {/* About Section */}
-        <FadeInSection id="about" className="section">
-          <div className="section-head">
-            <div className="kicker">Positioning</div>
-            <div>
-              <h2>
-                Not just design. <em>Direction.</em>
-              </h2>
-              <p className="lead">
-                I help brands move from basic visuals to a sharper creative system — the idea, the look, the content, and the final presentation working together.
-              </p>
-            </div>
-          </div>
+				{/* ── BACKGROUND ── */}
+				<FadeInSection>
+					<div
+						className={`border-b! ${BORDER} py-[120px]! px-6! md:px-15!`}
+					>
+						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
+							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
+								Background
+							</span>
+							<p className="text-[clamp(40px,6vw,90px)]! font-extrabold! leading-[0.93]! tracking-normal! capitalize! text-ink!">
+								<span className="text-accent!">10+ years</span> creative
+								<br />
+								foundation,
+								<br />
+								high-profile brand projects,
+								<br />
+								UAE &amp; international experience
+							</p>
+						</div>
+					</div>
+				</FadeInSection>
 
-          <div className="clients">
-            <div className="client">SoSocial</div>
-            <div className="client">
-              Capital<br />Motion
-            </div>
-            <div className="client">
-              Cafe Del<br />Mar
-            </div>
-            <div className="client">VERSUS</div>
-            <div className="client">
-              Tiki<br />Pacifico
-            </div>
-            <div className="client">
-              Brand<br />Folio
-            </div>
-            <div className="client">
-              LinkedIn<br />Content
-            </div>
-            <div className="client">
-              AI<br />Visuals
-            </div>
-            <div className="client">
-              Hospitality<br />Decks
-            </div>
-            <div className="client">
-              Logo<br />Systems
-            </div>
-            <div className="client">
-              Social<br />Campaigns
-            </div>
-            <div className="client">
-              App<br />Stories
-            </div>
-          </div>
-        </FadeInSection>
+				{/* ── CURRENT ROLE ── */}
+				<FadeInSection>
+					<div className={`border-b! ${BORDER} py-20! px-6! md:px-15!`}>
+						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
+							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
+								Current Role
+							</span>
+							<div>
+								<h2 className="text-[clamp(36px,5vw,72px)]! font-extrabold! tracking-[-0.03em]! capitalize! text-ink! leading-[0.93]!">
+									Creative Marketing Director
+								</h2>
+								<div className="flex! items-center! gap-3! mt-5!">
+									<div className="w-9! h-9! rounded-full! bg-card! border! border-[rgba(242,237,230,0.07)]! flex! items-center! justify-center! text-[14px]! font-extrabold! text-ink!">
+										V
+									</div>
+									<span className="text-[16px]! font-semibold! text-ink!">
+										Vinesh Studio
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</FadeInSection>
 
-        {/* Work Section */}
-        <FadeInSection id="work" className="section">
-          <div className="section-head">
-            <div className="kicker">Selected Work</div>
-            <div>
-              <h2>
-                Projects with <em>business</em> behind the visuals.
-              </h2>
-              <p className="lead">
-                A cleaner portfolio should show fewer projects, but with stronger case-study storytelling: challenge, idea, execution, and output.
-              </p>
-            </div>
-          </div>
+				{/* ── STATISTICS ── */}
+				<FadeInSection>
+					<div className={`border-b! ${BORDER} py-20! px-6! md:px-15!`}>
+						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
+							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
+								Some Statistics
+							</span>
+							<div className="grid! grid-cols-1! sm:grid-cols-3! gap-10!">
+								{[
+									{
+										num: "50+",
+										label: "Campaign & brand projects delivered",
+									},
+									{
+										num: "10K",
+										label: "Monthly content reach across platforms",
+									},
+									{
+										num: "300%",
+										label: "Average engagement growth for clients",
+									},
+								].map(({ num, label }) => (
+									<div key={num}>
+										<div className="text-[clamp(52px,7vw,96px)]! font-extrabold! tracking-[-0.04em]! text-ink! leading-[0.9]!">
+											{num}
+										</div>
+										<p className="text-[14px]! text-white/50! mt-3! leading-[1.4]!">
+											{label}
+										</p>
+									</div>
+								))}
+							</div>
+						</div>
+					</div>
+				</FadeInSection>
 
-          <div className="work-list">
-            <article className="project">
-              <div>
-                <span className="project-tag">Brand Strategy / Hospitality</span>
-                <h3>VERSUS Premium Sports Lounge</h3>
-              </div>
-              <div className="thumb" />
-              <p>
-                Brand concept, logo direction, ambience visuals, pitch deck storytelling, and premium sports lounge positioning.
-              </p>
-              <div className="arrow">↗</div>
-            </article>
+				{/* ── WHY I'M DIFFERENT ── */}
+				<FadeInSection>
+					<div
+						className={`border-b! ${BORDER} relative! overflow-hidden!`}
+					>
+						<h2 className="text-[clamp(80px,14vw,220px)]! font-extrabold! leading-[0.85]! tracking-[-0.03em]! capitalize! text-accent! px-6! md:px-15! pt-14! relative! z-1!">
+							Why I&apos;m Different
+						</h2>
 
-            <article className="project">
-              <div>
-                <span className="project-tag">Social System / LinkedIn B2B</span>
-                <h3>SoSocial Brand & Campaigns</h3>
-              </div>
-              <div className="thumb" />
-              <p>
-                Creative positioning, LinkedIn content, B2B storytelling, app visuals, and loyalty/payment communication.
-              </p>
-              <div className="arrow">↗</div>
-            </article>
+						<div className="absolute! top-0! left-1/2! -translate-x-1/2! w-[380px]! h-full! bg-[radial-gradient(ellipse_at_center_top,rgba(224,90,68,0.12)_0%,transparent_70%)]! z-2! pointer-events-none!" />
 
-            <article className="project">
-              <div>
-                <span className="project-tag">Event Design / Campaign</span>
-                <h3>Cafe Del Mar Season Finale</h3>
-              </div>
-              <div className="thumb" />
-              <p>
-                Event campaign direction, social poster system, poolside mood, and high-energy hospitality communication.
-              </p>
-              <div className="arrow">↗</div>
-            </article>
+						<div className="relative! z-3! max-w-[1440px]! mx-auto! px-6! md:px-15! pb-24! pt-14! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
+							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
+								My approach
+							</span>
+							<p className="text-[clamp(32px,4.5vw,64px)]! font-extrabold! tracking-[-0.03em]! text-ink! leading-[1.1]!">
+								I approach creative marketing as{" "}
+								<span className="text-accent!">applied psychology</span>{" "}
+								— understanding exactly what audiences need to believe,
+								then crafting comprehensive brand experiences that
+								deliver those outcomes and drive business results.
+							</p>
+						</div>
+					</div>
+				</FadeInSection>
 
-            <article className="project">
-              <div>
-                <span className="project-tag">Content System / Brand Folio</span>
-                <h3>Capital Motion Social System</h3>
-              </div>
-              <div className="thumb" />
-              <p>
-                Corporate LinkedIn visuals, awards communication, restaurant marketing content, and portfolio brand presence.
-              </p>
-              <div className="arrow">↗</div>
-            </article>
-          </div>
-        </FadeInSection>
+				{/* ── SHOWREEL / VIDEO ── */}
+				<FadeInSection>
+					<div className={`border-b! ${BORDER}`}>
+						<div className="max-w-[1440px]! mx-auto! px-6! md:px-15! pb-20! pt-20! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
+							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
+								Showreel
+							</span>
+							<p className="text-[clamp(22px,3vw,40px)]! font-bold! tracking-[-0.02em]! text-white/50! leading-[1.3]!">
+								Turning brand vision into visual reality — from concept
+								to execution.
+							</p>
+						</div>
 
-        {/* Stats Section */}
-        <FadeInSection className="section">
-          <div className="stats">
-            <div className="stat">
-              <strong>10+</strong>
-              <span>Years across UAE creative, marketing, social, and hospitality communication.</span>
-            </div>
-            <div className="stat">
-              <strong>5</strong>
-              <span>Core strengths: brand, campaign, social content, web design, and AI visual direction.</span>
-            </div>
-            <div className="stat">
-              <strong>50+</strong>
-              <span>Campaign, pitch, and web visuals shaped across restaurant, nightlife, and product contexts.</span>
-            </div>
-            <div className="stat">
-              <strong>1</strong>
-              <span>Simple goal: make brands look sharper, clearer, and more premium.</span>
-            </div>
-          </div>
-        </FadeInSection>
+						<div
+							className="relative! w-full!"
+							style={{ aspectRatio: "16/9", minHeight: 320 }}
+						>
+							<div
+								className="absolute! inset-0! flex! items-center! justify-center!"
+								style={{
+									background:
+										"linear-gradient(135deg,#0a1520 0%,#1a3040 40%,#2a5060 70%,#1e3a50 100%)",
+								}}
+							>
+								<div
+									className="absolute! inset-0!"
+									style={{
+										backgroundImage:
+											"linear-gradient(rgba(242,237,230,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(242,237,230,0.04) 1px,transparent 1px)",
+										backgroundSize: "80px 80px",
+									}}
+								/>
+								<button
+									aria-label="Play reel"
+									className="relative! z-10! w-[72px]! h-[72px]! rounded-full! bg-accent/90! flex! items-center! justify-center! hover:bg-accent! hover:scale-110! transition-all! duration-300! border-none! cursor-pointer!"
+								>
+									<svg
+										width="22"
+										height="24"
+										viewBox="0 0 22 24"
+										fill="none"
+									>
+										<path d="M2 2l18 10L2 22V2z" fill="#f2ede6" />
+									</svg>
+								</button>
+							</div>
 
-        {/* Services Section */}
-        <FadeInSection id="services" className="section">
-          <div className="approach">
-            <div className="approach-copy">
-              <p>Creative marketing is not decoration. It is how people decide if a brand is worth their time.</p>
-              <small>
-                My approach combines business understanding, visual taste, social media thinking, and AI-assisted speed. The output should not only look good — it should make the brand easier to understand, present, and sell.
-              </small>
-            </div>
+							<div className="absolute! bottom-6! right-6! z-10!">
+								<Link
+									href="/work"
+									className="inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-[11px]! font-bold! tracking-[0.14em]! capitalize! hover:bg-[#c94a36]! hover:-translate-y-0.5! transition-all! duration-300!"
+								>
+									View All Projects
+								</Link>
+							</div>
+						</div>
 
-            <div className="services">
-              <div className="service">
-                <b>01</b>
-                <div>
-                  <h3>Brand Identity & Visual Systems</h3>
-                  <p>Logo direction, typography, colors, tone, brand assets, and presentation-ready identity systems.</p>
-                </div>
-              </div>
+						<div className="bg-[rgba(14,18,24,0.7)]! px-6! md:px-15! py-5! text-center!">
+							<p className="text-[12px]! text-white/50!">
+								All brand materials featured are property of their
+								respective clients and used for portfolio demonstration
+								purposes only.
+							</p>
+						</div>
+					</div>
+				</FadeInSection>
 
-              <div className="service">
-                <b>02</b>
-                <div>
-                  <h3>Campaign & Social Content</h3>
-                  <p>Launch posts, LinkedIn creatives, restaurant campaigns, award announcements, and content grids.</p>
-                </div>
-              </div>
+				{/* ── TESTIMONIALS ── */}
+				<FadeInSection>
+					<div className={`border-b! ${BORDER} py-[120px]!`}>
+						<div className="max-w-[1440px]! mx-auto! px-6! md:px-15! mb-14!">
+							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
+								Testimonials
+							</span>
+						</div>
 
-              <div className="service">
-                <b>03</b>
-                <div>
-                  <h3>Hospitality Pitch Visuals</h3>
-                  <p>Deck covers, venue concepts, moodboards, event visuals, and premium presentation storytelling.</p>
-                </div>
-              </div>
+						<div
+							className="flex! gap-6! px-6! md:px-15! overflow-x-auto! pb-4! cursor-grab!"
+							style={{ scrollbarWidth: "none" }}
+						>
+							{TESTIMONIALS.map(({ quote, name, role }, i) => (
+								<div
+									key={i}
+									className="shrink-0! w-[min(460px,80vw)]! bg-card! border! border-[rgba(242,237,230,0.07)]! p-10! flex! flex-col! gap-8! hover:border-accent! transition-colors! duration-300!"
+								>
+									<span className="text-[48px]! text-accent! font-black! leading-none!">
+										&ldquo;
+									</span>
+									<p className="text-[clamp(18px,2vw,26px)]! font-bold! leading-[1.2]! tracking-[-0.02em]! text-ink!">
+										{quote}
+									</p>
+									<div className="mt-auto!">
+										<p className="text-[15px]! font-bold! text-ink!">
+											{name}
+										</p>
+										<p className="text-[13px]! text-white/50! mt-0.5!">
+											{role}
+										</p>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+				</FadeInSection>
+			</main>
 
-              <div className="service">
-                <b>04</b>
-                <div>
-                  <h3>AI Visual Direction</h3>
-                  <p>High-quality AI-assisted images, campaign mockups, concept renders, and experimental content ideas.</p>
-                </div>
-              </div>
-
-              <div className="service">
-                <b>05</b>
-                <div>
-                  <h3>Web Development & Digital Products</h3>
-                  <p>Modern, responsive websites, Next.js applications, portfolio platforms, and interactive user experiences designed to convert.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </FadeInSection>
-
-        {/* Testimonials Section */}
-        <FadeInSection className="section">
-          <div className="section-head">
-            <div className="kicker">Proof Style</div>
-            <div>
-              <h2>
-                What people should <em>feel</em> from the work.
-              </h2>
-            </div>
-          </div>
-
-          <div className="testimonials">
-            <div className="quote">
-              <p>“He understands the idea, the brand mood, and the business need — not just the design file.”</p>
-              <small>Hospitality / Campaign Direction</small>
-            </div>
-            <div className="quote">
-              <p>“Fast with visuals, sharp with positioning, and always pushing the brand to look more premium.”</p>
-              <small>Brand & Social Content</small>
-            </div>
-            <div className="quote">
-              <p>“The biggest strength is connecting strategy, content, and design into one clean presentation.”</p>
-              <small>Pitch Deck & Creative Direction</small>
-            </div>
-          </div>
-        </FadeInSection>
-      </main>
-
-      {/* Footer Section */}
-      <footer id="contact">
-        <div className="footer-inner">
-          <div className="kicker">Don’t be shy</div>
-          <h2>Let’s build something sharper for your brand.</h2>
-          <div style={{ marginTop: "34px" }}>
-            <a
-              className="btn"
-              style={{
-                background: "var(--cream)",
-                color: "var(--dark)",
-                borderColor: "var(--cream)",
-              }}
-              href="mailto:hello@vichufolio.com"
-            >
-              Let’s Connect
-            </a>
-          </div>
-
-          <div className="contact-grid">
-            <div>
-              <b>Email</b>
-              hello@vichufolio.com
-            </div>
-            <div>
-              <b>Based In</b>
-              UAE / Kerala · Available for selected brand, campaign, and creative direction projects.
-            </div>
-          </div>
-
-          <div className="bottom">
-            <div>© 2026 Vinesh Studio / VichuFolio</div>
-            <div>Making brands look sharper, one visual system at a time.</div>
-          </div>
-        </div>
-      </footer>
-    </>
-  );
+			<Footer />
+		</div>
+	);
 }

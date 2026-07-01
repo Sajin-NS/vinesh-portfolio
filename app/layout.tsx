@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Barlow } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "./components/smooth-scroll";
+import Preloader from "./components/preloader";
 
-const inter = Inter({
-  variable: "--font-sans",
+const barlow = Barlow({
+  variable: "--font-barlow",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Vinesh Studio — Creative Marketing & Brand Design",
-  description: "Building brands from idea to impact. Shape brand identities, campaign visuals, social systems, pitch decks, and AI-powered creative direction for hospitality, lifestyle, and digital-first businesses.",
-  authors: [{ name: "Vinesh Studio" }],
+  title: "Vinesh — Creative Marketing & Brand Design",
+  description:
+    "Multi-disciplinary creative leader specializing in brand identity, campaign design, social content systems, and AI-powered creative direction.",
+  authors: [{ name: "Vinesh" }],
 };
 
 export default function RootLayout({
@@ -20,11 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} h-full antialiased`}
-    >
-      <body className="min-h-full font-sans">
+    <html lang="en" className={barlow.variable}>
+      <body className="min-h-full">
+        <Preloader />
+        <SmoothScroll />
         {children}
       </body>
     </html>
