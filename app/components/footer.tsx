@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { FaInstagram, FaLinkedinIn, FaBehance } from "react-icons/fa";
 
 export default function Footer() {
 	return (
@@ -17,7 +18,7 @@ export default function Footer() {
 					{[
 						{ label: "About", href: "/about" },
 						{ label: "Work", href: "/work" },
-						{ label: "Contact", href: "/#contact" },
+						// { label: "Contact", href: "/#contact" },
 					].map(({ label, href }) => (
 						<Link
 							key={label}
@@ -63,18 +64,31 @@ export default function Footer() {
 						</p>
 						<div className="flex! gap-3! flex-wrap!">
 							{[
-								{ label: "In", name: "Instagram" },
-								{ label: "Li", name: "LinkedIn" },
-								{ label: "Be", name: "Behance" },
-								{ label: "Dr", name: "Dribbble" },
-							].map(({ label, name }) => (
+								{
+									name: "Instagram",
+									href: "https://www.instagram.com/vinesh_n_s/",
+									icon: <FaInstagram className="w-5! h-5!" />,
+								},
+								{
+									name: "LinkedIn",
+									href: "https://www.linkedin.com/in/vinesh-ns",
+									icon: <FaLinkedinIn className="w-5! h-5!" />,
+								},
+								{
+									name: "Behance",
+									href: "https://www.behance.net/vineshstudio",
+									icon: <FaBehance className="w-5! h-5!" />,
+								},
+							].map(({ name, href, icon }) => (
 								<a
 									key={name}
-									href="#"
+									href={href}
+									target="_blank"
+									rel="noopener noreferrer"
 									aria-label={name}
-									className="w-11! h-11! rounded-full! border! border-[rgba(242,237,230,0.07)]! flex! items-center! justify-center! text-[13px]! font-bold! text-white/50! hover:border-ink! hover:text-ink! transition-all! duration-300!"
+									className="w-11! h-11! rounded-full! border! border-[rgba(242,237,230,0.07)]! flex! items-center! justify-center! text-white/50! hover:border-ink! hover:text-accent! transition-all! duration-300!"
 								>
-									{label}
+									{icon}
 								</a>
 							))}
 						</div>
