@@ -26,7 +26,7 @@ const STORY = [
 	{
 		label: "03 · Now",
 		title: "Creative direction meets business strategy",
-		body: "Today I lead creative output across full brand systems, campaign executions, social content ecosystems, and web experiences. I'm not just a designer — I'm a strategic creative who thinks in outcomes and builds in systems.",
+		body: "Today I lead creative output across full brand systems, campaign executions, social content ecosystems, custom web development, and web apps. I'm not just a designer — I'm a strategic creative who thinks in outcomes and builds in systems.",
 	},
 ];
 
@@ -35,6 +35,7 @@ const CAPABILITIES = [
 	"Creative Direction",
 	"Campaign Design & Social Content",
 	"Hospitality & F&B Marketing",
+	"Web Development & Web Apps",
 	"AI-Powered Visual Production",
 	"Web Design & Digital Products",
 	"Pitch Deck & Presentation Design",
