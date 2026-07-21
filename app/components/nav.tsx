@@ -8,7 +8,7 @@ import { motion, AnimatePresence, useScroll } from "framer-motion";
 const NAV_LINKS = [
 	{ label: "About", href: "/about" },
 	{ label: "Work", href: "/work" },
-	{ label: "Contact", href: "/#contact" },
+	{ label: "Contact", href: "/contact" },
 ];
 
 const ALL_LINKS = [{ label: "Home", href: "/" }, ...NAV_LINKS];
@@ -86,7 +86,7 @@ export default function Nav() {
 					<button
 						onClick={() => setSidebarOpen(true)}
 						aria-label="Open navigation menu"
-						className="flex! flex-col! gap-[5px]! justify-center! items-end! w-10! h-10! cursor-pointer! bg-transparent! border-none! p-1!"
+						className="flex! flex-col! gap-1.25! justify-center! items-end! w-10! h-10! cursor-pointer! bg-transparent! border-none! p-1!"
 					>
 						<motion.span
 							className="block! h-0.5! bg-ink! rounded-full!"

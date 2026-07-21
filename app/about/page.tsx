@@ -59,7 +59,7 @@ export default function AboutPage() {
 				{/* ── HERO ── */}
 				<section className="relative! min-h-screen! flex! items-end! overflow-hidden!">
 					<img
-						className="absolute! inset-0! z-0!"
+						className="absolute! inset-0! z-0! min-h-screen!"
 						src={`/images/hero_bg.jpg`}
 					/>
 					<div className="absolute! inset-0! bg-[radial-gradient(ellipse_70%_60%_at_60%_30%,rgba(40,60,90,0.6)_0%,transparent_70%)]! z-0!" />
@@ -100,7 +100,8 @@ export default function AboutPage() {
 				<FadeInSection>
 					<div className="grid! grid-cols-1! md:grid-cols-3! gap-1! h-auto! md:h-100!">
 						{PHOTO_TILES.map(({ bg, label }) => (
-							<div
+							<Link
+								href={"/work"}
 								key={label}
 								className="relative! overflow-hidden! group! min-h-50! md:min-h-0!"
 							>
@@ -112,7 +113,7 @@ export default function AboutPage() {
 										{label}
 									</span>
 								</div>
-							</div>
+							</Link>
 						))}
 					</div>
 				</FadeInSection>

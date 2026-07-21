@@ -85,7 +85,7 @@ export default function Home() {
 					<img
 						src={`/images/hero_bg.jpg`}
 						alt="hero bg"
-						className="absolute! inset-0! z-1!"
+						className="absolute! inset-0! z-1! min-h-screen!"
 					/>
 
 					{/* Dark gradient overlay */}
@@ -101,7 +101,7 @@ export default function Home() {
 							That Drives Results
 						</h1>
 
-						<div className="flex! md:flex-col! items-start! md:items-end! gap-5! md:text-right!">
+						<div className="flex! flex-wrap! md:flex-col! items-start! md:items-end! gap-5! md:text-right!">
 							<span className="base! font-semibold! text-white/50! tracking-[0.08em]!">
 								Design with purpose
 							</span>
@@ -139,9 +139,7 @@ export default function Home() {
 
 				{/* ── BACKGROUND ── */}
 				<FadeInSection>
-					<div
-						className={`border-b! ${BORDER} py-30! px-6! md:px-15!`}
-					>
+					<div className={`border-b! ${BORDER} py-30! px-6! md:px-15!`}>
 						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
 								Background

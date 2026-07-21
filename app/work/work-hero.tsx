@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
 export default function WorkHero() {
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -55,7 +55,7 @@ export default function WorkHero() {
 interface WordWrapperProps {
 	word: string;
 	index: number;
-	activeIndexTransform: any;
+	activeIndexTransform: MotionValue<number>;
 }
 
 function WordWrapper({ word, index, activeIndexTransform }: WordWrapperProps) {
