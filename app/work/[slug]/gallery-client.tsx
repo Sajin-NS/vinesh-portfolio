@@ -12,14 +12,7 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 	const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
 	// Simulated aspect ratios to make a dynamic masonry feel with repeated images
-	const aspectRatios = [
-		"4/3",
-		"3/4",
-		"1/1",
-		"16/9",
-		"2/3",
-		"4/5",
-	];
+	const aspectRatios = ["4/3", "3/4", "1/1", "16/9", "2/3", "4/5"];
 
 	// Keyboard accessibility
 	useEffect(() => {
@@ -29,9 +22,15 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 			if (e.key === "Escape") {
 				setActiveIndex(null);
 			} else if (e.key === "ArrowRight") {
-				setActiveIndex((prev) => (prev !== null ? (prev + 1) % images.length : null));
+				setActiveIndex((prev) =>
+					prev !== null ? (prev + 1) % images.length : null,
+				);
 			} else if (e.key === "ArrowLeft") {
-				setActiveIndex((prev) => (prev !== null ? (prev - 1 + images.length) % images.length : null));
+				setActiveIndex((prev) =>
+					prev !== null
+						? (prev - 1 + images.length) % images.length
+						: null,
+				);
 			}
 		};
 
@@ -49,7 +48,7 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 						<div
 							key={idx}
 							onClick={() => setActiveIndex(idx)}
-							className="break-inside-avoid! mb-6! relative! overflow-hidden! rounded-[8px]! border! border-[rgba(242,237,230,0.07)]! group! cursor-pointer! w-full!"
+							className="break-inside-avoid! mb-6! relative! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! group! cursor-pointer! w-full!"
 						>
 							<img
 								src={img}
@@ -91,10 +90,14 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 							{/* Prev Button */}
 							<button
 								onClick={() =>
-									setActiveIndex((prev) => (prev !== null ? (prev - 1 + images.length) % images.length : null))
+									setActiveIndex((prev) =>
+										prev !== null
+											? (prev - 1 + images.length) % images.length
+											: null,
+									)
 								}
 								aria-label="Previous image"
-								className="absolute! left-[-16px]! md:left-[-60px]! z-210! w-10! h-10! md:w-12! md:h-12! flex! items-center! justify-center! text-ink! hover:text-accent! transition-colors! duration-200! bg-black/50! hover:bg-black/80! rounded-full! border! border-[rgba(242,237,230,0.1)]! cursor-pointer! text-xl!"
+								className="absolute! -left-4! md:-left-15! z-210! w-10! h-10! md:w-12! md:h-12! flex! items-center! justify-center! text-ink! hover:text-accent! transition-colors! duration-200! bg-black/50! hover:bg-black/80! rounded-full! border! border-[rgba(242,237,230,0.1)]! cursor-pointer! text-xl!"
 							>
 								‹
 							</button>
@@ -118,10 +121,12 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 							{/* Next Button */}
 							<button
 								onClick={() =>
-									setActiveIndex((prev) => (prev !== null ? (prev + 1) % images.length : null))
+									setActiveIndex((prev) =>
+										prev !== null ? (prev + 1) % images.length : null,
+									)
 								}
 								aria-label="Next image"
-								className="absolute! right-[-16px]! md:right-[-60px]! z-210! w-10! h-10! md:w-12! md:h-12! flex! items-center! justify-center! text-ink! hover:text-accent! transition-colors! duration-200! bg-black/50! hover:bg-black/80! rounded-full! border! border-[rgba(242,237,230,0.1)]! cursor-pointer! text-xl!"
+								className="absolute! -right-4! md:-right-15! z-210! w-10! h-10! md:w-12! md:h-12! flex! items-center! justify-center! text-ink! hover:text-accent! transition-colors! duration-200! bg-black/50! hover:bg-black/80! rounded-full! border! border-[rgba(242,237,230,0.1)]! cursor-pointer! text-xl!"
 							>
 								›
 							</button>

@@ -9,7 +9,7 @@ export default function Footer() {
 			id="contact"
 		>
 			{/* ── Top grid: label | menu | contact ── */}
-			<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! lg:grid-cols-[260px_1fr_1fr]! gap-10! pb-20! border-b! border-[rgba(242,237,230,0.07)]!">
+			<div className="max-w-360! mx-auto! grid! grid-cols-1! lg:grid-cols-[260px_1fr_1fr]! gap-10! pb-20! border-b! border-[rgba(242,237,230,0.07)]!">
 				{/* Label */}
 				<div></div>
 

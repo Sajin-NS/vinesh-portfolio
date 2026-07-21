@@ -50,10 +50,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 		<div className="min-h-screen! bg-bg!">
 			<Nav />
 
-			<main className="pt-[140px]! md:pt-[180px]!">
+			<main className="pt-35! md:pt-45!">
 				{/* ── HEADER & BACK NAVIGATION ── */}
 				<section className="px-6! md:px-10! pb-14! border-b! border-[rgba(242,237,230,0.07)]!">
-					<div className="max-w-[1440px]! mx-auto!">
+					<div className="max-w-360! mx-auto!">
 						<Link
 							href="/work"
 							className="inline-flex! items-center! gap-2! text-white/50! hover:text-accent! transition-colors! duration-300! text-base! font-semibold! tracking-[0.06em]! mb-10! group!"
@@ -92,12 +92,12 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
 				{/* ── PROJECT DETAILS ── */}
 				<section className={`py-20! px-6! md:px-10! border-b! ${BORDER}`}>
-					<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-12! items-start!">
+					<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-12! items-start!">
 						<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
 							The Overview
 						</span>
 						<div>
-							<p className="text-[clamp(18px,2.4vw,28px)]! font-bold! text-ink! leading-[1.3]! tracking-[-0.02em]! max-w-[900px]!">
+							<p className="text-[clamp(18px,2.4vw,28px)]! font-bold! text-ink! leading-[1.3]! tracking-[-0.02em]! max-w-225!">
 								{project.desc}
 							</p>
 						</div>
@@ -106,7 +106,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
 				{/* ── GALLERY MASONRY WORK ── */}
 				<section className={`py-20! px-6! md:px-10! border-b! ${BORDER}`}>
-					<div className="max-w-[1440px]! mx-auto!">
+					<div className="max-w-360! mx-auto!">
 						<div className="mb-14!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! block! mb-2!">
 								The Case Study
@@ -116,17 +116,20 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 							</h2>
 						</div>
 
-						<GalleryClient images={project.gallery} title={project.title} />
+						<GalleryClient
+							images={project.gallery}
+							title={project.title}
+						/>
 					</div>
 				</section>
 
 				{/* ── NEXT PROJECT TRANSITION CARD ── */}
-				<section className="py-[120px]! px-6! md:px-10! bg-card/20! relative! overflow-hidden! group! border-b! border-[rgba(242,237,230,0.07)]!">
-					<div className="max-w-[1440px]! mx-auto! flex! flex-col! items-center! text-center! relative! z-2!">
+				<section className="py-30! px-6! md:px-10! bg-card/20! relative! overflow-hidden! group! border-b! border-[rgba(242,237,230,0.07)]!">
+					<div className="max-w-360! mx-auto! flex! flex-col! items-center! text-center! relative! z-2!">
 						<span className="text-xl! font-bold! text-accent! tracking-widest! uppercase! mb-4!">
 							Up Next
 						</span>
-						<h3 className="text-[clamp(40px,6vw,90px)]! font-extrabold! leading-[0.93]! tracking-[-0.03em]! capitalize! text-ink! group-hover:text-accent! transition-colors! duration-500! max-w-[900px]! mb-8!">
+						<h3 className="text-[clamp(40px,6vw,90px)]! font-extrabold! leading-[0.93]! tracking-[-0.03em]! capitalize! text-ink! group-hover:text-accent! transition-colors! duration-500! max-w-225! mb-8!">
 							{nextProject.title}
 						</h3>
 						<span className="inline-flex! items-center! gap-3! text-[16px]! font-bold! tracking-widest! uppercase! border-b-2! border-accent! pb-2! group-hover:gap-5! transition-all! duration-300!">
