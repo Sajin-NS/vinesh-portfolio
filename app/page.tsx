@@ -92,8 +92,8 @@ export default function Home() {
 					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(14,18,24,0.3)]! via-[rgba(14,18,24,0.5)]! to-[rgba(14,18,24,0.92)]! z-1!" />
 
 					{/* Content */}
-					<div className="relative! z-2! max-w-[1440px]! mx-auto! w-full! px-6! md:px-15! pb-14! md:pb-[60px]! grid! grid-cols-1! md:grid-cols-[1fr_auto]! items-end! gap-8! md:gap-10!">
-						<h1 className="text-[clamp(44px,8.5vw,110px)]! capitalize! font-extrabold! leading-[0.9]! tracking-[-0.03em]! text-ink! max-w-[900px]!">
+					<div className="relative! z-2! max-w-360! mx-auto! w-full! px-6! md:px-15! pb-14! md:pb-15! grid! grid-cols-1! md:grid-cols-[1fr_auto]! items-end! gap-8! md:gap-10!">
+						<h1 className="text-[clamp(44px,8.5vw,110px)]! capitalize! font-extrabold! leading-[0.9]! tracking-[-0.03em]! text-ink! max-w-225!">
 							Multi-Disciplinary
 							<br />
 							<span className="text-accent">Creative Leadership</span>
@@ -126,7 +126,7 @@ export default function Home() {
 					<div
 						className={`border-t! border-b! ${BORDER} py-14! px-6! md:px-15!`}
 					>
-						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-center!">
+						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-center!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
 								Clients
 							</span>
@@ -140,9 +140,9 @@ export default function Home() {
 				{/* ── BACKGROUND ── */}
 				<FadeInSection>
 					<div
-						className={`border-b! ${BORDER} py-[120px]! px-6! md:px-15!`}
+						className={`border-b! ${BORDER} py-30! px-6! md:px-15!`}
 					>
-						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
+						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
 								Background
 							</span>
@@ -162,7 +162,7 @@ export default function Home() {
 				{/* ── CURRENT ROLE ── */}
 				<FadeInSection>
 					<div className={`border-b! ${BORDER} py-20! px-6! md:px-15!`}>
-						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
+						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
 								Current Role
 							</span>
@@ -174,7 +174,7 @@ export default function Home() {
 									<div className="w-9! h-9! rounded-full! bg-card! border! border-[rgba(242,237,230,0.07)]! flex! items-center! justify-center! text-[14px]! font-extrabold! text-ink!">
 										V
 									</div>
-									<span className="text-[16px]! font-semibold! text-ink!">
+									<span className="text-base! font-semibold! text-ink!">
 										Vinesh Studio
 									</span>
 								</div>
@@ -186,7 +186,7 @@ export default function Home() {
 				{/* ── STATISTICS ── */}
 				<FadeInSection>
 					<div className={`border-b! ${BORDER} py-20! px-6! md:px-15!`}>
-						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
+						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
 								Some Statistics
 							</span>
@@ -209,7 +209,7 @@ export default function Home() {
 										<div className="text-[clamp(52px,7vw,96px)]! font-extrabold! tracking-[-0.04em]! text-ink! leading-[0.9]!">
 											{num}
 										</div>
-										<p className="text-[14px]! text-white/50! mt-3! leading-[1.4]!">
+										<p className="text-sm! text-white/50! mt-3! leading-[1.4]!">
 											{label}
 										</p>
 									</div>
@@ -228,9 +228,9 @@ export default function Home() {
 							Why I&apos;m Different
 						</h2>
 
-						<div className="absolute! top-0! left-1/2! -translate-x-1/2! w-[380px]! h-full! bg-[radial-gradient(ellipse_at_center_top,rgba(224,90,68,0.12)_0%,transparent_70%)]! z-2! pointer-events-none!" />
+						<div className="absolute! top-0! left-1/2! -translate-x-1/2! w-95! h-full! bg-[radial-gradient(ellipse_at_center_top,rgba(224,90,68,0.12)_0%,transparent_70%)]! z-2! pointer-events-none!" />
 
-						<div className="relative! z-3! max-w-[1440px]! mx-auto! px-6! md:px-15! pb-24! pt-14! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
+						<div className="relative! z-3! max-w-360! mx-auto! px-6! md:px-15! pb-24! pt-14! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
 								My approach
 							</span>
@@ -248,7 +248,7 @@ export default function Home() {
 				{/* ── SHOWREEL / VIDEO ── */}
 				<FadeInSection>
 					<div className={`border-b! ${BORDER}`}>
-						<div className="max-w-[1440px]! mx-auto! px-6! md:px-15! pb-20! pt-20! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
+						<div className="max-w-360! mx-auto! px-6! md:px-15! pb-20! pt-20! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
 								Showreel
 							</span>
@@ -279,7 +279,7 @@ export default function Home() {
 								/>
 								<button
 									aria-label="Play reel"
-									className="relative! z-10! w-[72px]! h-[72px]! rounded-full! bg-accent/90! flex! items-center! justify-center! hover:bg-accent! hover:scale-110! transition-all! duration-300! border-none! cursor-pointer!"
+									className="relative! z-10! w-18! h-18! rounded-full! bg-accent/90! flex! items-center! justify-center! hover:bg-accent! hover:scale-110! transition-all! duration-300! border-none! cursor-pointer!"
 								>
 									<svg
 										width="22"
@@ -303,7 +303,7 @@ export default function Home() {
 						</div>
 
 						<div className="bg-[rgba(14,18,24,0.7)]! px-6! md:px-15! py-5! text-center!">
-							<p className="text-[12px]! text-white/50!">
+							<p className="text-xs! text-white/50!">
 								All brand materials featured are property of their
 								respective clients and used for portfolio demonstration
 								purposes only.
@@ -314,8 +314,8 @@ export default function Home() {
 
 				{/* ── TESTIMONIALS ── */}
 				<FadeInSection>
-					<div className={`border-b! ${BORDER} py-[120px]!`}>
-						<div className="max-w-[1440px]! mx-auto! px-6! md:px-15! mb-14!">
+					<div className={`border-b! ${BORDER} py-30!`}>
+						<div className="max-w-360! mx-auto! px-6! md:px-15! mb-14!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
 								Testimonials
 							</span>
@@ -330,7 +330,7 @@ export default function Home() {
 									key={i}
 									className="shrink-0! w-[min(460px,80vw)]! bg-card! border! border-[rgba(242,237,230,0.07)]! p-10! flex! flex-col! gap-8! hover:border-accent! transition-colors! duration-300!"
 								>
-									<span className="text-[48px]! text-accent! font-black! leading-none!">
+									<span className="text-5xl! text-accent! font-black! leading-none!">
 										&ldquo;
 									</span>
 									<p className="text-[clamp(18px,2vw,26px)]! font-bold! leading-[1.2]! tracking-[-0.02em]! text-ink!">

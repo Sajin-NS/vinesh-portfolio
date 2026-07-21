@@ -187,7 +187,7 @@ export default function LogoGallery() {
 						<div
 							key={logo.id}
 							onClick={() => setActiveIndex(idx)}
-							className="break-inside-avoid! mb-6! relative! overflow-hidden! rounded-[8px]! border! border-[rgba(242,237,230,0.07)]! bg-card! group! cursor-pointer! w-full! transition-all! duration-300! "
+							className="break-inside-avoid! mb-6! relative! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! bg-card! group! cursor-pointer! w-full! transition-all! duration-300! "
 						>
 							<div className="relative! w-full! overflow-hidden!">
 								<img
@@ -200,7 +200,7 @@ export default function LogoGallery() {
 
 								{/* Mini Hover Label */}
 								<div className="absolute! bottom-4! left-4! z-2! opacity-0! group-hover:opacity-100! transition-all! duration-300! translate-y-2! group-hover:translate-y-0!">
-									<p className="text-[12px]! font-extrabold! tracking-widest! uppercase! text-accent!">
+									<p className="text-xs! font-extrabold! tracking-widest! uppercase! text-accent!">
 										{logo.title}
 									</p>
 									<p className="text-[10px]! text-ink/60! mt-0.5!">
@@ -248,7 +248,7 @@ export default function LogoGallery() {
 									)
 								}
 								aria-label="Previous logo"
-								className="absolute! left-[-16px]! md:left-[-60px]! z-210! w-10! h-10! md:w-12! md:h-12! flex! items-center! justify-center! text-ink! hover:text-accent! transition-colors! duration-200! bg-black/50! hover:bg-black/80! rounded-full! border! border-[rgba(242,237,230,0.1)]! cursor-pointer! text-xl!"
+								className="absolute! -left-4! md:-left-15! z-210! w-10! h-10! md:w-12! md:h-12! flex! items-center! justify-center! text-ink! hover:text-accent! transition-colors! duration-200! bg-black/50! hover:bg-black/80! rounded-full! border! border-[rgba(242,237,230,0.1)]! cursor-pointer! text-xl!"
 							>
 								‹
 							</button>
@@ -275,7 +275,7 @@ export default function LogoGallery() {
 
 								{/* Title & description below image inside lightbox */}
 								<div className="text-center! mt-2!">
-									<h4 className="text-[18px]! font-bold! text-ink!">
+									<h4 className="text-lg! font-bold! text-ink!">
 										{logos[activeIndex].title}
 									</h4>
 									<p className="text-[13px]! text-white/50! mt-1!">

@@ -65,7 +65,7 @@ export default function AboutPage() {
 					<div className="absolute! inset-0! bg-[radial-gradient(ellipse_70%_60%_at_60%_30%,rgba(40,60,90,0.6)_0%,transparent_70%)]! z-0!" />
 					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(14,18,24,0.2)]! via-[rgba(14,18,24,0.8)]! to-bg! z-1!" />
 
-					<div className="relative! z-2! w-full! max-w-[1440px]! mx-auto! px-6! md:px-10! pb-20! flex! justify-between! items-end! flex-col! md:flex-row! gap-5!">
+					<div className="relative! z-2! w-full! max-w-360! mx-auto! px-6! md:px-10! pb-20! flex! justify-between! items-end! flex-col! md:flex-row! gap-5!">
 						<h1 className="text-[clamp(52px,9vw,110px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
 							10 Years
 							<br />
@@ -79,10 +79,8 @@ export default function AboutPage() {
 
 				{/* ── INSIGHT ── */}
 				<FadeInSection>
-					<div
-						className={`border-b! ${BORDER} py-[120px]! px-6! md:px-10!`}
-					>
-						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
+					<div className={`border-b! ${BORDER} py-30! px-6! md:px-10!`}>
+						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
 								Insight
 							</span>
@@ -100,11 +98,11 @@ export default function AboutPage() {
 
 				{/* ── PHOTO ROW ── */}
 				<FadeInSection>
-					<div className="grid! grid-cols-1! md:grid-cols-3! gap-1! h-auto! md:h-[400px]!">
+					<div className="grid! grid-cols-1! md:grid-cols-3! gap-1! h-auto! md:h-100!">
 						{PHOTO_TILES.map(({ bg, label }) => (
 							<div
 								key={label}
-								className="relative! overflow-hidden! group! min-h-[200px]! md:min-h-0!"
+								className="relative! overflow-hidden! group! min-h-50! md:min-h-0!"
 							>
 								<div
 									className="absolute! inset-0! flex! items-end! p-5! transition-transform! duration-500! group-hover:scale-105!"
@@ -121,10 +119,8 @@ export default function AboutPage() {
 
 				{/* ── PHILOSOPHY ── */}
 				<FadeInSection>
-					<div
-						className={`border-b! ${BORDER} py-[120px]! px-6! md:px-10!`}
-					>
-						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
+					<div className={`border-b! ${BORDER} py-30! px-6! md:px-10!`}>
+						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
 								Philosophy
 							</span>
@@ -144,9 +140,9 @@ export default function AboutPage() {
 				{/* ── STORY ── */}
 				<FadeInSection>
 					<section
-						className={`border-b! ${BORDER} py-[120px]! px-6! md:px-10!`}
+						className={`border-b! ${BORDER} py-30! px-6! md:px-10!`}
 					>
-						<div className="max-w-[1440px]! mx-auto! flex! flex-col!">
+						<div className="max-w-360! mx-auto! flex! flex-col!">
 							{STORY.map(({ label, title, body }, i) => (
 								<div
 									key={label}
@@ -161,7 +157,7 @@ export default function AboutPage() {
 										<h3 className="text-[clamp(22px,3vw,40px)]! font-bold! tracking-[-0.02em]! text-ink! leading-[1.05]! mb-5!">
 											{title}
 										</h3>
-										<p className="text-[clamp(16px,1.8vw,22px)]! text-white/50! leading-[1.55]! max-w-[700px]!">
+										<p className="text-[clamp(16px,1.8vw,22px)]! text-white/50! leading-[1.55]! max-w-175!">
 											{body}
 										</p>
 									</div>
@@ -174,9 +170,9 @@ export default function AboutPage() {
 				{/* ── CAPABILITIES ── */}
 				<FadeInSection>
 					<section
-						className={`border-b! ${BORDER} py-[120px]! px-6! md:px-10!`}
+						className={`border-b! ${BORDER} py-30! px-6! md:px-10!`}
 					>
-						<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
+						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
 								Capabilities
 							</span>
@@ -194,7 +190,7 @@ export default function AboutPage() {
 										<span className="text-[clamp(18px,2.5vw,32px)]! font-extrabold! tracking-tight! capitalize! text-white/50! hover:text-ink! transition-colors! duration-300!">
 											{cap}
 										</span>
-										<span className="text-[20px]! text-dim! group-hover:text-accent! group-hover:translate-x-1! group-hover:-translate-y-1! transition-all! duration-300!">
+										<span className="text-xl! text-dim! group-hover:text-accent! group-hover:translate-x-1! group-hover:-translate-y-1! transition-all! duration-300!">
 											↗
 										</span>
 									</div>
@@ -206,7 +202,7 @@ export default function AboutPage() {
 
 				{/* ── CTA ── */}
 				<FadeInSection>
-					<div className="py-[100px]! px-6! md:px-10! text-center!">
+					<div className="py-25! px-6! md:px-10! text-center!">
 						<p className="text-[clamp(32px,4.5vw,64px)]! font-extrabold! tracking-[-0.03em]! text-white/50! mb-10!">
 							Ready to build something{" "}
 							<span className="text-accent!">exceptional?</span>

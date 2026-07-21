@@ -17,10 +17,10 @@ export default function LogoPage() {
 		<div className="min-h-screen! bg-bg!">
 			<Nav />
 
-			<main className="pt-[140px]! md:pt-[180px]!">
+			<main className="pt-35! md:pt-45!">
 				{/* ── HEADER & BACK NAVIGATION ── */}
 				<section className="px-6! md:px-10! pb-14! border-b! border-[rgba(242,237,230,0.07)]!">
-					<div className="max-w-[1440px]! mx-auto!">
+					<div className="max-w-360! mx-auto!">
 						<Link
 							href="/work"
 							className="inline-flex! items-center! gap-2! text-white/50! hover:text-accent! transition-colors! duration-300! text-base! font-semibold! tracking-[0.06em]! mb-10! group!"
@@ -46,7 +46,7 @@ export default function LogoPage() {
 								Index
 							</span>
 							<div>
-								<span className="text-[14px]! text-white/40! font-bold! tracking-widest! uppercase! block! mb-4!">
+								<span className="text-sm! text-white/40! font-bold! tracking-widest! uppercase! block! mb-4!">
 									Identity Showcase
 								</span>
 								<h1 className="text-[clamp(44px,7vw,100px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
@@ -59,12 +59,12 @@ export default function LogoPage() {
 
 				{/* ── OVERVIEW ── */}
 				<section className={`py-16! px-6! md:px-10! border-b! ${BORDER}`}>
-					<div className="max-w-[1440px]! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-12! items-start!">
+					<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-12! items-start!">
 						<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
 							The Art of the Mark
 						</span>
 						<div>
-							<p className="text-[clamp(18px,2.4vw,28px)]! font-bold! text-ink! leading-[1.3]! tracking-[-0.02em]! max-w-[900px]!">
+							<p className="text-[clamp(18px,2.4vw,28px)]! font-bold! text-ink! leading-[1.3]! tracking-[-0.02em]! max-w-225!">
 								A collection of logos, identity symbols, and brand icons
 								crafted to communicate value, establish recognition, and
 								leave a lasting impression in a single glance.
