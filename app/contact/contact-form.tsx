@@ -9,6 +9,7 @@ export default function ContactForm() {
 	const [form, setForm] = useState({
 		name: "",
 		email: "",
+		phone: "",
 		projectType: "Branding",
 		message: "",
 	});
@@ -41,6 +42,9 @@ export default function ContactForm() {
 		} else if (!/\S+@\S+\.\S+/.test(form.email)) {
 			newErrors.email = "Please enter a valid email address.";
 		}
+		if (!form.phone.trim()) {
+			newErrors.phone = "Phone number is required.";
+		}
 		if (!form.message.trim()) newErrors.message = "Message is required.";
 
 		setErrors(newErrors);
@@ -60,6 +64,7 @@ export default function ContactForm() {
 				setForm({
 					name: "",
 					email: "",
+					phone: "",
 					projectType: "Branding",
 					message: "",
 				});
@@ -177,6 +182,32 @@ export default function ContactForm() {
 							{errors.email && (
 								<p className="text-xs! text-accent! mt-1!">
 									{errors.email}
+								</p>
+							)}
+						</div>
+						<div className="flex! flex-col! gap-2!">
+							<label
+								htmlFor="phone"
+								className="text-xs! font-bold! tracking-widest! uppercase! text-white/40!"
+							>
+								Phone Number
+							</label>
+							<input
+								type="tel"
+								id="phone"
+								name="phone"
+								value={form.phone}
+								onChange={handleInputChange}
+								className={`w-full! bg-card/30! border! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! ${
+									errors.phone
+										? "border-accent!"
+										: "border-[rgba(242,237,230,0.07)]! focus:border-accent!"
+								}`}
+								placeholder="Enter your phone number"
+							/>
+							{errors.phone && (
+								<p className="text-xs! text-accent! mt-1!">
+									{errors.phone}
 								</p>
 							)}
 						</div>
