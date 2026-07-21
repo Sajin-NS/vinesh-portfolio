@@ -28,13 +28,13 @@ export default function WorkHero() {
 	return (
 		<section
 			ref={containerRef}
-			className="min-h-screen! flex! items-center! px-6! md:px-10! py-40! border-b! border-[rgba(242,237,230,0.07)]!"
+			className="min-h-screen! flex! items-center! px-6! md:px-10! py-20! md:py-40! border-b! border-[rgba(242,237,230,0.07)]!"
 		>
 			<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start! w-full!">
 				<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
 					Turning Insight into Impact
 				</span>
-				<h1 className="text-[clamp(52px,8vw,120px)]! font-extrabold! leading-[0.92]! tracking-[-0.03em]! capitalize! text-ink!">
+				<h1 className="text-[clamp(32px,8vw,120px)]! font-extrabold! leading-[0.92]! tracking-[-0.03em]! capitalize! text-ink!">
 					Case studies demonstrating{" "}
 					<span className="inline-flex! flex-wrap! gap-x-[0.25em]!">
 						{accentWords.map((word, idx) => (

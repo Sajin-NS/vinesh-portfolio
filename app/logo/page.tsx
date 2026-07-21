@@ -49,7 +49,7 @@ export default function LogoPage() {
 								<span className="text-sm! text-white/40! font-bold! tracking-widest! uppercase! block! mb-4!">
 									Identity Showcase
 								</span>
-								<h1 className="text-[clamp(44px,7vw,100px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
+								<h1 className="text-[clamp(30px,7vw,100px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
 									Logo Works
 								</h1>
 							</div>

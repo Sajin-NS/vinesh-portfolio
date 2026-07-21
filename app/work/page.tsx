@@ -52,7 +52,7 @@ export default function WorkPage() {
 									logo
 								</span>
 								<div>
-									<h2 className="text-[clamp(42px,7vw,100px)]! font-extrabold! tracking-[-0.03em]! capitalize! text-ink! leading-[0.9]! flex! items-center! gap-5! flex-wrap!">
+									<h2 className="text-[clamp(30px,7vw,100px)]! font-extrabold! tracking-[-0.03em]! capitalize! text-ink! leading-[0.9]! flex! items-center! gap-5! flex-wrap!">
 										<Link
 											href="/logo"
 											className="hover:text-accent! transition-colors! duration-300!"
@@ -153,7 +153,7 @@ export default function WorkPage() {
 										{c.num}
 									</span>
 									<div>
-										<h2 className="text-[clamp(42px,7vw,100px)]! font-extrabold! tracking-[-0.03em]! capitalize! text-ink! leading-[0.9]! flex! items-center! gap-5! flex-wrap!">
+										<h2 className="text-[clamp(30px,7vw,100px)]! font-extrabold! tracking-[-0.03em]! capitalize! text-ink! leading-[0.9]! flex! items-center! gap-5! flex-wrap!">
 											<Link
 												href={`/work/${c.case_slug}`}
 												className="hover:text-accent! transition-colors! duration-300!"

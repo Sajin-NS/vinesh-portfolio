@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
+import { sendContactEmail } from "./actions";
 
 export default function ContactForm() {
 	const [form, setForm] = useState({
@@ -52,16 +53,23 @@ export default function ContactForm() {
 
 		setStatus("loading");
 
-		// Simulate API call for premium user experience
-		setTimeout(() => {
-			setStatus("success");
-			setForm({
-				name: "",
-				email: "",
-				projectType: "Branding",
-				message: "",
-			});
-		}, 1500);
+		try {
+			const result = await sendContactEmail(form);
+			if (result.success) {
+				setStatus("success");
+				setForm({
+					name: "",
+					email: "",
+					projectType: "Branding",
+					message: "",
+				});
+			} else {
+				setStatus("error");
+			}
+		} catch (error) {
+			console.error("Error submitting form:", error);
+			setStatus("error");
+		}
 	};
 
 	// Prefilled message for WhatsApp connection
@@ -111,6 +119,12 @@ export default function ContactForm() {
 						exit={{ opacity: 0 }}
 						className="flex! flex-col! gap-6!"
 					>
+						{status === "error" && (
+							<div className="p-4! bg-accent/10! border! border-accent/30! rounded-lg! text-accent! text-sm! font-semibold! leading-relaxed!">
+								Something went wrong while sending your message. Please try again or reach out directly via WhatsApp below.
+							</div>
+						)}
+
 						{/* Name Field */}
 						<div className="flex! flex-col! gap-2!">
 							<label

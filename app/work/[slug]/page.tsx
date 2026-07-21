@@ -82,7 +82,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 								<span className="text-[14px]! text-white/40! font-bold! tracking-widest! uppercase! block! mb-4!">
 									{project.subtitle}
 								</span>
-								<h1 className="text-[clamp(44px,7vw,100px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
+								<h1 className="text-[clamp(30px,7vw,100px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
 									{project.title}
 								</h1>
 							</div>

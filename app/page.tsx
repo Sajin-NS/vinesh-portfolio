@@ -93,7 +93,7 @@ export default function Home() {
 
 					{/* Content */}
 					<div className="relative! z-2! max-w-360! mx-auto! w-full! px-6! md:px-15! pb-14! md:pb-15! grid! grid-cols-1! md:grid-cols-[1fr_auto]! items-end! gap-8! md:gap-10!">
-						<h1 className="text-[clamp(44px,8.5vw,110px)]! capitalize! font-extrabold! leading-[0.9]! tracking-[-0.03em]! text-ink! max-w-225!">
+						<h1 className="text-[clamp(30px,8.5vw,110px)]! capitalize! font-extrabold! leading-[0.9]! tracking-[-0.03em]! text-ink! max-w-225!">
 							Multi-Disciplinary
 							<br />
 							<span className="text-accent">Creative Leadership</span>
@@ -101,7 +101,7 @@ export default function Home() {
 							That Drives Results
 						</h1>
 
-						<div className="flex! flex-wrap! md:flex-col! items-start! md:items-end! gap-5! md:text-right!">
+						<div className="flex! flex-col! sm:flex-row! md:flex-col! items-stretch! sm:items-start! md:items-end! gap-4! sm:gap-5! md:text-right! w-full! sm:w-auto!">
 							<span className="base! font-semibold! text-white/50! tracking-[0.08em]!">
 								Design with purpose
 							</span>
