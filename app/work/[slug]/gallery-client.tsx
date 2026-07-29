@@ -11,9 +11,6 @@ interface GalleryClientProps {
 export default function GalleryClient({ images, title }: GalleryClientProps) {
 	const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-	// Simulated aspect ratios to make a dynamic masonry feel with repeated images
-	const aspectRatios = ["4/3", "3/4", "1/1", "16/9", "2/3", "4/5"];
-
 	// Keyboard accessibility
 	useEffect(() => {
 		if (activeIndex === null) return;
@@ -40,23 +37,20 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 
 	return (
 		<>
-			{/* Masonry multi-column layout */}
-			<div className="columns-1! sm:columns-2! lg:columns-3! gap-6! space-y-6!">
+			{/* Full width stacked gallery */}
+			<div className="flex! flex-col! gap-8! md:gap-12! w-full!">
 				{images.map((img, idx) => {
-					const aspect = aspectRatios[idx % aspectRatios.length];
 					return (
 						<div
 							key={idx}
 							onClick={() => setActiveIndex(idx)}
-							className="break-inside-avoid! mb-6! relative! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! group! cursor-pointer! w-full!"
+							className="relative! overflow-hidden! rounded-xl! border! border-[rgba(242,237,230,0.07)]! bg-card! group! cursor-pointer! w-full! transition-all! duration-300!"
 						>
 							<img
 								src={img}
 								alt={`${title} Work Showcase ${idx + 1}`}
-								style={{ aspectRatio: aspect }}
-								className="w-full! h-auto! object-cover! group-hover:scale-105! transition-transform! duration-700! ease-out!"
+								className="w-full! h-auto! block! group-hover:scale-[1.01]! transition-transform! duration-700! ease-out!"
 							/>
-							<div className="absolute! inset-0! bg-black/20! group-hover:bg-black/0! transition-colors! duration-500!" />
 						</div>
 					);
 				})}

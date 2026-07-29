@@ -142,19 +142,6 @@ export default function LogoGallery() {
 		},
 	];
 
-	// Custom aspect ratios to create a dynamic masonry grid
-	const aspectRatios = [
-		"1/1",
-		"3/4",
-		"4/3",
-		"2/3",
-		"16/9",
-		"4/5",
-		"1/1",
-		"3/4",
-		"4/3",
-	];
-
 	// Keyboard navigation support
 	useEffect(() => {
 		if (activeIndex === null) return;
@@ -179,31 +166,28 @@ export default function LogoGallery() {
 
 	return (
 		<>
-			{/* Masonry layout grid */}
-			<div className="columns-1! sm:columns-2! lg:columns-3! gap-6! space-y-6!">
+			{/* Full width stacked gallery */}
+			<div className="flex! flex-col! gap-8! md:gap-12! w-full!">
 				{logos.map((logo, idx) => {
-					const aspect = aspectRatios[idx % aspectRatios.length];
 					return (
 						<div
 							key={logo.id}
 							onClick={() => setActiveIndex(idx)}
-							className="break-inside-avoid! mb-6! relative! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! bg-card! group! cursor-pointer! w-full! transition-all! duration-300! "
+							className="relative! overflow-hidden! rounded-xl! border! border-[rgba(242,237,230,0.07)]! bg-card! group! cursor-pointer! w-full! transition-all! duration-300!"
 						>
 							<div className="relative! w-full! overflow-hidden!">
 								<img
 									src={logo.src}
 									alt={logo.title}
-									style={{ aspectRatio: aspect }}
-									className="w-full! h-auto! object-cover! group-hover:scale-102! transition-transform! duration-700! ease-out!"
+									className="w-full! h-auto! block! group-hover:scale-[1.01]! transition-transform! duration-700! ease-out!"
 								/>
-								{/* <div className="absolute! inset-0! bg-black/40! group-hover:bg-black/10! transition-colors! duration-500!" /> */}
 
 								{/* Mini Hover Label */}
-								<div className="absolute! bottom-4! left-4! z-2! opacity-0! group-hover:opacity-100! transition-all! duration-300! translate-y-2! group-hover:translate-y-0!">
-									<p className="text-xs! font-extrabold! tracking-widest! uppercase! text-accent!">
+								<div className="absolute! bottom-4! left-4! md:bottom-6! md:left-6! z-2! opacity-0! group-hover:opacity-100! transition-all! duration-300! translate-y-2! group-hover:translate-y-0! bg-black/60! backdrop-blur-md! px-4! py-2! rounded-md!">
+									<p className="text-xs! md:text-sm! font-extrabold! tracking-widest! uppercase! text-accent!">
 										{logo.title}
 									</p>
-									<p className="text-[10px]! text-ink/60! mt-0.5!">
+									<p className="text-[10px]! md:text-xs! text-ink/60! mt-0.5!">
 										{logo.desc}
 									</p>
 								</div>

@@ -3,6 +3,7 @@ import { Barlow } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./components/smooth-scroll";
 import Preloader from "./components/preloader";
+import BackToTop from "./components/back-to-top";
 
 const barlow = Barlow({
   variable: "--font-barlow",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <Preloader />
         <SmoothScroll />
         {children}
+        <BackToTop />
       </body>
     </html>
   );
