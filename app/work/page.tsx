@@ -161,16 +161,18 @@ export default function WorkPage() {
 												{c.title}
 											</Link>
 										</h2>
-										<p className="text-[14px]! text-white/50! mt-3! tracking-[0.04em]!">
+										<p className="text-[18px]! text-white/50! mt-3! tracking-[0.04em]!">
 											{c.subtitle}
 										</p>
 									</div>
 								</div>
 
 								{/* Description */}
-								<p className="text-[clamp(18px,2.2vw,28px)]! font-bold! text-ink! leading-[1.3]! tracking-[-0.02em]! max-w-225! ml-auto!">
-									{c.desc}
-								</p>
+								<div className="text-[clamp(14px,2.2vw,25px)]! font-bold! text-white/70! leading-[1.3]! tracking-[-0.02em]! max-w-284! ml-auto! space-y-4!">
+									{c.desc.map((p, idx) => (
+										<p key={idx}>{p}</p>
+									))}
+								</div>
 
 								{/* Gallery */}
 								<div className="grid! grid-cols-1! md:grid-cols-4! gap-6! mt-14! items-end!">
@@ -224,6 +226,29 @@ export default function WorkPage() {
 											sizes="(max-width: 768px) 100vw, 25vw"
 										/>
 										<div className="absolute! inset-0! bg-black/20! group-hover:bg-black/0! transition-colors! duration-500!" />
+									</Link>
+								</div>
+
+								{/* View All Button */}
+								<div className="mt-14! flex! justify-end!">
+									<Link
+										href={`/work/${c.case_slug}`}
+										className="inline-flex! items-center! gap-3! text-base! font-bold! tracking-widest! uppercase! border-b-2! border-accent! pb-2! hover:gap-5! transition-all! duration-300! group!"
+									>
+										<span>View All Works</span>
+										<svg
+											className="w-5! h-5! text-accent! transition-transform! duration-300! group-hover:translate-x-1!"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+											strokeWidth="3"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												d="M14 5l7 7m0 0l-7 7m7-7H3"
+											/>
+										</svg>
 									</Link>
 								</div>
 							</div>

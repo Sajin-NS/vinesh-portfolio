@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps) {
 	}
 	return {
 		title: `${project.title} — Vinesh Studio`,
-		description: project.desc,
+		description: Array.isArray(project.desc) ? project.desc.join(" ") : project.desc,
 	};
 }
 
@@ -97,9 +97,13 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 							The Overview
 						</span>
 						<div>
-							<p className="text-[clamp(18px,2.4vw,28px)]! font-bold! text-ink! leading-[1.3]! tracking-[-0.02em]! max-w-225!">
-								{project.desc}
-							</p>
+							<div className="text-[clamp(18px,2.4vw,28px)]! font-bold! text-ink! leading-[1.3]! tracking-[-0.02em]! max-w-225! space-y-4!">
+								{Array.isArray(project.desc) ? (
+									project.desc.map((p, idx) => <p key={idx}>{p}</p>)
+								) : (
+									<p>{project.desc}</p>
+								)}
+							</div>
 						</div>
 					</div>
 				</section>
