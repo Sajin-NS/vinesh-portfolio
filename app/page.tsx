@@ -83,7 +83,7 @@ export default function Home() {
 				{/* ── HERO ── */}
 				<section className="relative! min-h-screen! flex! flex-col! justify-end! overflow-hidden!">
 					<img
-						src={`/images/hero_bg.jpg`}
+						src={`/common/home-banner.png`}
 						alt="hero bg"
 						className="absolute! inset-0! z-1! min-h-screen!"
 					/>

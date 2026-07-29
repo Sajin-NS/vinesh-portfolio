@@ -61,7 +61,7 @@ export default function AboutPage() {
 				<section className="relative! min-h-screen! flex! items-end! overflow-hidden!">
 					<img
 						className="absolute! inset-0! z-0! min-h-screen!"
-						src={`/images/hero_bg.jpg`}
+						src={`/common/home-banner.png`}
 					/>
 					<div className="absolute! inset-0! bg-[radial-gradient(ellipse_70%_60%_at_60%_30%,rgba(40,60,90,0.6)_0%,transparent_70%)]! z-0!" />
 					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(14,18,24,0.2)]! via-[rgba(14,18,24,0.8)]! to-bg! z-1!" />

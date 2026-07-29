@@ -182,7 +182,7 @@ export default function WorkPage() {
 										className="relative! block! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! group! h-80! md:h-110! md:col-span-1! cursor-pointer!"
 									>
 										<Image
-											src={c.gallery[0] || "/images/hero_bg.jpg"}
+											src={c.gallery[0]}
 											alt={`${c.title} Detail 1`}
 											fill
 											className="object-cover! group-hover:scale-105! transition-transform! duration-700! ease-out!"
@@ -197,7 +197,7 @@ export default function WorkPage() {
 										className="relative! block! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! group! h-95! md:h-135! md:col-span-2! cursor-pointer!"
 									>
 										<Image
-											src={c.gallery[1] || "/images/hero_bg.jpg"}
+											src={c.gallery[1]}
 											alt={`${c.title} Detail 2`}
 											fill
 											className="object-cover! group-hover:scale-105! transition-transform! duration-700! ease-out!"
@@ -219,7 +219,7 @@ export default function WorkPage() {
 										className="relative! block! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! group! h-70! md:h-95! md:col-span-1! cursor-pointer!"
 									>
 										<Image
-											src={c.gallery[2] || "/images/hero_bg.jpg"}
+											src={c.gallery[2]}
 											alt={`${c.title} Detail 3`}
 											fill
 											className="object-cover! group-hover:scale-105! transition-transform! duration-700! ease-out!"
