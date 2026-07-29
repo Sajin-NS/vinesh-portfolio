@@ -106,13 +106,13 @@ export default function Home() {
 								Design with purpose
 							</span>
 							<Link
-								href="/#contact"
+								href="/contact"
 								className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5!"
 							>
 								let&apos;s connect
 							</Link>
 							<Link
-								href="/#contact"
+								href="/contact"
 								className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-white/20! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-white/30! hover:-translate-y-0.5!"
 							>
 								download resume

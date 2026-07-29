@@ -210,7 +210,7 @@ export default function AboutPage() {
 							<span className="text-accent!">exceptional?</span>
 						</p>
 						<Link
-							href="/#contact"
+							href="/contact"
 							className="inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-[11px]! font-bold! tracking-[0.14em]! capitalize! hover:bg-[#c94a36]! hover:-translate-y-0.5! transition-all! duration-300!"
 						>
 							Let&apos;s Connect
