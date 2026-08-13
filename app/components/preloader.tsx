@@ -33,46 +33,27 @@ export default function Preloader() {
 					className="fixed! inset-0! z-9999! flex! flex-col! items-center! justify-center! bg-bg!"
 				>
 					<div className="flex! flex-col! items-center! gap-7!">
-						{/* Spinning/rotating logo container */}
+						{/* Loader logo video container */}
 						<motion.div
-							initial={{ rotate: 0, scale: 0.7, opacity: 0 }}
+							initial={{ scale: 0.8, opacity: 0 }}
 							animate={{
-								rotate: 360,
 								scale: 1,
 								opacity: 1,
 								transition: {
-									rotate: {
-										repeat: Infinity,
-										duration: 2,
-										ease: "linear",
-									},
 									scale: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
 									opacity: { duration: 0.5 },
 								},
 							}}
-							className="w-20! h-20! flex! items-center! justify-center!"
+							className="w-24! h-24! sm:w-28! sm:h-28! flex! items-center! justify-center!"
 						>
-							<svg
-								className="w-full! h-full!"
-								viewBox="0 0 40 40"
-								fill="none"
-							>
-								<circle
-									cx="20"
-									cy="20"
-									r="19"
-									stroke="#f2ede6"
-									strokeWidth="1.5"
-								/>
-								<circle
-									cx="20"
-									cy="20"
-									r="11"
-									stroke="#f2ede6"
-									strokeWidth="1.5"
-								/>
-								<circle cx="20" cy="12" r="3.5" fill="#f2ede6" />
-							</svg>
+							<video
+								src="/common/loader_logo.mp4"
+								autoPlay
+								loop
+								muted
+								playsInline
+								className="w-full! h-full! object-contain!"
+							/>
 						</motion.div>
 
 						{/* Fading and translating branding text */}

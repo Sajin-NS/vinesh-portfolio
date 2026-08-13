@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 
@@ -48,23 +49,15 @@ export default function Nav() {
 			>
 				{/* Logo */}
 				<Link href="/" className="flex! items-center! gap-3! shrink-0!">
-					<svg className="w-12! h-12!" viewBox="0 0 40 40" fill="none">
-						<circle
-							cx="20"
-							cy="20"
-							r="19"
-							stroke="#f2ede6"
-							strokeWidth="1.5"
-						/>
-						<circle
-							cx="20"
-							cy="20"
-							r="11"
-							stroke="#f2ede6"
-							strokeWidth="1.5"
-						/>
-						<circle cx="20" cy="12" r="3.5" fill="#f2ede6" />
-					</svg>
+					<Image
+						src="/common/white-logo.png"
+						alt="Vinesh Studio"
+						width={100}
+						height={100}
+						className="w-12! h-12! object-contain!"
+						priority
+					/>
+
 					<AnimatePresence>
 						{!scrolled && (
 							<motion.span
