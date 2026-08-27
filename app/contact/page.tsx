@@ -39,7 +39,6 @@ export default function ContactPage() {
 				{/* ── CONTACT GRID ── */}
 				<section className={`py-20! px-6! md:px-10! border-b! ${BORDER}`}>
 					<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-16! items-start!">
-						
 						{/* Info Panel Left */}
 						<div className="flex! flex-col! gap-10!">
 							{/* Email */}
@@ -48,10 +47,10 @@ export default function ContactPage() {
 									Email Address
 								</h3>
 								<a
-									href="mailto:hello@vineshstudio.com"
+									href="mailto:vichuzstudio@gmail.com"
 									className="text-lg! font-bold! text-ink! hover:text-accent! transition-colors! duration-300!"
 								>
-									hello@vineshstudio.com
+									vichuzstudio@gmail.com
 								</a>
 							</div>
 
@@ -73,7 +72,9 @@ export default function ContactPage() {
 									Response Time
 								</h3>
 								<p className="text-base! font-medium! text-ink/70! leading-relaxed!">
-									Usually responds within 24 hours. Available for contract, freelance, and remote creative direction globally.
+									Usually responds within 24 hours. Available for
+									contract, freelance, and remote creative direction
+									globally.
 								</p>
 							</div>
 						</div>
@@ -82,7 +83,6 @@ export default function ContactPage() {
 						<div className="w-full! max-w-225!">
 							<ContactForm />
 						</div>
-
 					</div>
 				</section>
 			</main>

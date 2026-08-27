@@ -38,10 +38,10 @@ export default function Footer() {
 							Email:
 						</p>
 						<a
-							href="mailto:hello@vineshstudio.com"
+							href="mailto:vichuzstudio@gmail.com"
 							className="text-[clamp(18px,2.5vw,30px)]! font-bold! tracking-[-0.02em]! text-ink! hover:text-accent! transition-colors! duration-200!"
 						>
-							hello@vineshstudio.com
+							vichuzstudio@gmail.com
 						</a>
 					</div>
 
@@ -51,7 +51,7 @@ export default function Footer() {
 							Based In:
 						</p>
 						<p className="text-[clamp(14px,1.8vw,20px)]! text-white/50! leading-[1.4]!">
-							UAE · Kerala · Available for brand,
+							Available for brand,
 							<br className="hidden! sm:block!" /> campaign &amp;
 							creative direction projects.
 						</p>

@@ -46,13 +46,10 @@ export default function Preloader() {
 							}}
 							className="w-24! h-24! sm:w-28! sm:h-28! flex! items-center! justify-center!"
 						>
-							<video
-								src="/common/loader_logo.mp4"
-								autoPlay
-								loop
-								muted
-								playsInline
-								className="w-full! h-full! object-contain!"
+							<img
+								src={`/common/white-logo.png`}
+								alt="Vinesh Studio Logo"
+								className="h-full w-full"
 							/>
 						</motion.div>
 

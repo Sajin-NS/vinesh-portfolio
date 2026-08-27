@@ -58,7 +58,7 @@ export default function Nav() {
 						priority
 					/>
 
-					<AnimatePresence>
+					{/* <AnimatePresence>
 						{!scrolled && (
 							<motion.span
 								initial={{ opacity: 0, x: -15, width: 0 }}
@@ -71,7 +71,7 @@ export default function Nav() {
 								<span>Studio</span>
 							</motion.span>
 						)}
-					</AnimatePresence>
+					</AnimatePresence> */}
 				</Link>
 
 				<div className="flex! items-center! gap-5!">
@@ -177,12 +177,12 @@ export default function Nav() {
 						{/* Sidebar footer */}
 						<div className="border-t! border-[rgba(242,237,230,0.07)]! pt-6!">
 							<a
-								href="mailto:hello@vineshstudio.com"
+								href="mailto:vichuzstudio@gmail.com"
 								className="text-[14px]! font-bold! text-ink! hover:text-accent! transition-colors! duration-200! block! mb-1!"
 							>
-								hello@vineshstudio.com
+								vichuzstudio@gmail.com
 							</a>
-							<p className="text-[13px]! text-white/50!">UAE · Kerala</p>
+							{/* <p className="text-[13px]! text-white/50!">UAE · Kerala</p> */}
 						</div>
 					</motion.aside>
 				)}

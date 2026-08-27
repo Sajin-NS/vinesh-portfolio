@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import Link from "next/link";
 
 export default function WorkHero() {
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -28,8 +29,28 @@ export default function WorkHero() {
 	return (
 		<section
 			ref={containerRef}
-			className="min-h-screen! flex! items-center! px-6! md:px-10! py-20! md:py-40! border-b! border-[rgba(242,237,230,0.07)]!"
+			className="min-h-screen! flex-col! items-center! px-6! md:px-10! py-20! md:py-40! border-b! border-[rgba(242,237,230,0.07)]!"
 		>
+			<div className="flex gap-5 justify-center mb-20">
+				<Link
+					href="/contact"
+					className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5!"
+				>
+					Branding
+				</Link>
+				<Link
+					href="/contact"
+					className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5!"
+				>
+					Graphics
+				</Link>
+				<Link
+					href="/contact"
+					className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5!"
+				>
+					Logos
+				</Link>
+			</div>
 			<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start! w-full!">
 				<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
 					Turning Insight into Impact

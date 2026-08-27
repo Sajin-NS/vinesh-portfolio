@@ -82,10 +82,18 @@ export default function Home() {
 			<main>
 				{/* ── HERO ── */}
 				<section className="relative! min-h-screen! flex! flex-col! justify-end! overflow-hidden!">
-					<img
+					{/* <img
 						src={`/common/home-banner.png`}
 						alt="hero bg"
 						className="absolute! inset-0! z-1! min-h-screen!"
+					/> */}
+					<video
+						src="/common/loader_logo.mp4"
+						autoPlay
+						loop
+						muted
+						playsInline
+						className="absolute! inset-0! z-0! h-full! w-full! object-cover!"
 					/>
 
 					{/* Dark gradient overlay */}
@@ -105,7 +113,7 @@ export default function Home() {
 							<span className="base! font-semibold! text-white/50! tracking-[0.08em]!">
 								Design with purpose
 							</span>
-							<Link
+							{/* <Link
 								href="/contact"
 								className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5!"
 							>
@@ -116,13 +124,13 @@ export default function Home() {
 								className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-white/20! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-white/30! hover:-translate-y-0.5!"
 							>
 								download resume
-							</Link>
+							</Link> */}
 						</div>
 					</div>
 				</section>
 
 				{/* ── CLIENTS ── */}
-				<FadeInSection>
+				{/* <FadeInSection>
 					<div
 						className={`border-t! border-b! ${BORDER} py-14! px-6! md:px-15!`}
 					>
@@ -135,10 +143,10 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-				</FadeInSection>
+				</FadeInSection> */}
 
 				{/* ── BACKGROUND ── */}
-				<FadeInSection>
+				{/* <FadeInSection>
 					<div className={`border-b! ${BORDER} py-30! px-6! md:px-15!`}>
 						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
@@ -155,10 +163,10 @@ export default function Home() {
 							</p>
 						</div>
 					</div>
-				</FadeInSection>
+				</FadeInSection> */}
 
 				{/* ── CURRENT ROLE ── */}
-				<FadeInSection>
+				{/* <FadeInSection>
 					<div className={`border-b! ${BORDER} py-20! px-6! md:px-15!`}>
 						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
@@ -179,10 +187,10 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-				</FadeInSection>
+				</FadeInSection> */}
 
 				{/* ── STATISTICS ── */}
-				<FadeInSection>
+				{/* <FadeInSection>
 					<div className={`border-b! ${BORDER} py-20! px-6! md:px-15!`}>
 						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
@@ -215,7 +223,7 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-				</FadeInSection>
+				</FadeInSection> */}
 
 				{/* ── WHY I'M DIFFERENT ── */}
 				<FadeInSection>
@@ -223,15 +231,16 @@ export default function Home() {
 						className={`border-b! ${BORDER} relative! overflow-hidden!`}
 					>
 						<h2 className="text-[clamp(80px,14vw,220px)]! font-extrabold! leading-[0.85]! tracking-[-0.03em]! capitalize! text-accent! px-6! md:px-15! pt-14! relative! z-1!">
-							Why I&apos;m Different
+							My approach
 						</h2>
 
 						<div className="absolute! top-0! left-1/2! -translate-x-1/2! w-95! h-full! bg-[radial-gradient(ellipse_at_center_top,rgba(224,90,68,0.12)_0%,transparent_70%)]! z-2! pointer-events-none!" />
 
 						<div className="relative! z-3! max-w-360! mx-auto! px-6! md:px-15! pb-24! pt-14! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
-							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
+							{/* <span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
 								My approach
-							</span>
+							</span> */}
+							<div></div>
 							<p className="text-[clamp(32px,4.5vw,64px)]! font-extrabold! tracking-[-0.03em]! text-ink! leading-[1.1]!">
 								I approach creative marketing as{" "}
 								<span className="text-accent!">applied psychology</span>{" "}
@@ -244,7 +253,7 @@ export default function Home() {
 				</FadeInSection>
 
 				{/* ── SHOWREEL / VIDEO ── */}
-				<FadeInSection>
+				{/* <FadeInSection>
 					<div className={`border-b! ${BORDER}`}>
 						<div className="max-w-360! mx-auto! px-6! md:px-15! pb-20! pt-20! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
 							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
@@ -308,7 +317,7 @@ export default function Home() {
 							</p>
 						</div>
 					</div>
-				</FadeInSection>
+				</FadeInSection> */}
 
 				{/* ── TESTIMONIALS ── */}
 				<FadeInSection>

@@ -68,7 +68,7 @@ export default function AboutPage() {
 
 					<div className="relative! z-2! w-full! max-w-360! mx-auto! px-6! md:px-10! pb-20! flex! justify-between! items-end! flex-col! md:flex-row! gap-5!">
 						<h1 className="text-[clamp(52px,9vw,110px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
-							10 Years
+							16 Years
 							<br />
 							of <span className="text-accent!">Craft</span>
 						</h1>
@@ -98,7 +98,7 @@ export default function AboutPage() {
 				</FadeInSection>
 
 				{/* ── PHOTO ROW ── */}
-				<FadeInSection>
+				{/* <FadeInSection>
 					<div className="grid! grid-cols-1! md:grid-cols-3! gap-1! h-auto! md:h-100!">
 						{PHOTO_TILES.map(({ bg, label }) => (
 							<Link
@@ -117,7 +117,7 @@ export default function AboutPage() {
 							</Link>
 						))}
 					</div>
-				</FadeInSection>
+				</FadeInSection> */}
 
 				{/* ── PHILOSOPHY ── */}
 				<FadeInSection>
