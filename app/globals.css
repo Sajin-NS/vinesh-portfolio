@@ -30,3 +30,10 @@ img { display: block; max-width: 100%; }
 
 /* selection */
 ::selection { background: #e05a44; color: #f2ede6; }
+
+.font-serif-italic {
+  font-family: var(--font-serif), 'Instrument Serif', 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+

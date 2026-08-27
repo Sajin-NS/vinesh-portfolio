@@ -4,6 +4,7 @@ import Nav from "./components/nav";
 import Footer from "./components/footer";
 import FadeInSection from "./components/fade-in-section";
 import ClientMarquee from "./components/client-marquee";
+import HeroCards from "./components/hero-cards";
 
 const BORDER = "border-[rgba(242,237,230,0.07)]!";
 
@@ -81,12 +82,7 @@ export default function Home() {
 
 			<main>
 				{/* ── HERO ── */}
-				<section className="relative! min-h-screen! flex! flex-col! justify-end! overflow-hidden!">
-					{/* <img
-						src={`/common/home-banner.png`}
-						alt="hero bg"
-						className="absolute! inset-0! z-1! min-h-screen!"
-					/> */}
+				<section className="relative! min-h-screen! flex! flex-col! justify-center! overflow-hidden! pt-28! pb-16!">
 					<video
 						src="/common/loader_logo.mp4"
 						autoPlay
@@ -97,37 +93,111 @@ export default function Home() {
 					/>
 
 					{/* Dark gradient overlay */}
-					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(14,18,24,0.3)]! via-[rgba(14,18,24,0.5)]! to-[rgba(14,18,24,0.92)]! z-1!" />
+					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(14,18,24,0.4)]! via-[rgba(14,18,24,0.7)]! to-[rgba(14,18,24,0.95)]! z-1!" />
 
 					{/* Content */}
-					<div className="relative! z-2! max-w-360! mx-auto! w-full! px-6! md:px-15! pb-14! md:pb-15! grid! grid-cols-1! md:grid-cols-[1fr_auto]! items-end! gap-8! md:gap-10!">
-						<h1 className="text-[clamp(30px,8.5vw,110px)]! capitalize! font-extrabold! leading-[0.9]! tracking-[-0.03em]! text-ink! max-w-225!">
-							Multi-Disciplinary
-							<br />
-							<span className="text-accent">Creative Leadership</span>
-							<br />
-							That Drives Results
-						</h1>
+					<div className="relative! z-2! mx-auto! w-full! px-6! md:px-12! grid! grid-cols-1! lg:grid-cols-[1fr_auto]! items-center! gap-10! lg:gap-12!">
+						<div className="flex! flex-col!">
+							<h1 className="text-[clamp(44px,7.5vw,105px)]! font-black! uppercase! leading-[0.88]! tracking-[-0.03em]! text-ink!">
+								BUILDING BRANDS
+								<br />
+								FROM{" "}
+								<span className="font-serif-italic! italic text-accent! lowercase">
+									idea
+								</span>{" "}
+								TO
+								<br />
+								IMPACT
+							</h1>
 
-						<div className="flex! flex-col! sm:flex-row! md:flex-col! items-stretch! sm:items-start! md:items-end! gap-4! sm:gap-5! md:text-right! w-full! sm:w-auto!">
-							<span className="base! font-semibold! text-white/50! tracking-[0.08em]!">
-								Design with purpose
-							</span>
-							{/* <Link
-								href="/contact"
-								className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5!"
-							>
-								let&apos;s connect
-							</Link>
-							<Link
-								href="/contact"
-								className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-white/20! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-white/30! hover:-translate-y-0.5!"
-							>
-								download resume
-							</Link> */}
+							<p className="text-[clamp(16px,1.8vw,21px)]! text-white/70! font-medium! leading-[1.45]! mt-8! max-w-xl!">
+								I shape brand identities, campaign visuals, social
+								systems, pitch decks, and AI-powered creative direction
+								for hospitality, lifestyle, and digital-first
+								businesses.
+							</p>
+
+							<div className="flex! flex-wrap! items-center! gap-4! mt-8!">
+								<Link
+									href="/work"
+									className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-[#f2ede6]! text-[#0e1218]! text-xs! font-extrabold! tracking-[0.14em]! rounded-full! transition-all! duration-300! hover:bg-accent! hover:text-ink! hover:scale-105!"
+								>
+									VIEW SELECTED WORK
+								</Link>
+								<Link
+									href="#positioning"
+									className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! border! border-white/25! text-ink! text-xs! font-extrabold! tracking-[0.14em]! rounded-full! transition-all! duration-300! hover:border-accent! hover:text-accent! hover:scale-105!"
+								>
+									WHAT I DO
+								</Link>
+							</div>
+						</div>
+
+						{/* Right side: 3D Floating Cards */}
+						<div className="w-full! lg:w-auto!">
+							<HeroCards />
 						</div>
 					</div>
 				</section>
+
+				{/* ── POSITIONING ("NOT JUST DESIGN.") ── */}
+				<FadeInSection>
+					<section
+						id="positioning"
+						className={`border-b! ${BORDER} py-24! md:py-32! px-6! md:px-15! relative!`}
+					>
+						<div className="mx-auto! grid! grid-cols-1! gap-10! items-start!">
+							{/* Left tag */}
+							<span className="text-xs! font-extrabold! text-accent! uppercase! tracking-[0.2em]! pt-3!">
+								POSITIONING
+							</span>
+
+							{/* Main positioning content */}
+							<div>
+								<h2 className="text-[clamp(44px,8vw,110px)]! font-black! uppercase! leading-[0.88]! tracking-[-0.03em]! text-ink!">
+									NOT JUST
+									<br />
+									DESIGN.
+									<br />
+									<span className="font-serif-italic text-accent capitalize">
+										Direction.
+									</span>
+								</h2>
+
+								<p className="text-[clamp(18px,2.2vw,24px)]! text-white/70! font-medium! leading-[1.4]! mt-8! max-w-2xl!">
+									I help brands move from basic visuals to a sharper
+									creative system — the idea, the look, the content,
+									and the final presentation working together.
+								</p>
+
+								{/* Brand / Capability Grid */}
+								<div className="mt-14! rounded-2xl! border! border-[rgba(242,237,230,0.12)]! bg-[#121720]/80! backdrop-blur-md! overflow-hidden! grid! grid-cols-2! sm:grid-cols-3! lg:grid-cols-6!">
+									{[
+										"SOSOCIAL",
+										"CAPITAL MOTION",
+										"CAFE DEL MAR",
+										"VERSUS",
+										"TIKI PACIFICO",
+										"BRAND FOLIO",
+										"LINKEDIN CONTENT",
+										"AI VISUALS",
+										"HOSPITALITY DECKS",
+										"LOGO SYSTEMS",
+										"SOCIAL CAMPAIGNS",
+										"APP STORIES",
+									].map((item, idx) => (
+										<div
+											key={idx}
+											className="p-6! text-center! text-xs! sm:text-sm! font-extrabold! tracking-wider! text-ink! border-b! border-r! border-[rgba(242,237,230,0.08)]! hover:bg-accent/10! hover:text-accent! transition-colors! duration-300! flex! items-center! justify-center! min-h-[90px]!"
+										>
+											{item}
+										</div>
+									))}
+								</div>
+							</div>
+						</div>
+					</section>
+				</FadeInSection>
 
 				{/* ── CLIENTS ── */}
 				{/* <FadeInSection>
@@ -230,17 +300,16 @@ export default function Home() {
 					<div
 						className={`border-b! ${BORDER} relative! overflow-hidden!`}
 					>
-						<h2 className="text-[clamp(80px,14vw,220px)]! font-extrabold! leading-[0.85]! tracking-[-0.03em]! capitalize! text-accent! px-6! md:px-15! pt-14! relative! z-1!">
+						<h2 className="text-[clamp(30px,8.5vw,110px)]! font-extrabold! leading-[0.85]! tracking-[-0.03em]! capitalize! text-accent! px-6! md:px-15! pt-14! relative! z-1!">
 							My approach
 						</h2>
 
 						<div className="absolute! top-0! left-1/2! -translate-x-1/2! w-95! h-full! bg-[radial-gradient(ellipse_at_center_top,rgba(224,90,68,0.12)_0%,transparent_70%)]! z-2! pointer-events-none!" />
 
-						<div className="relative! z-3! max-w-360! mx-auto! px-6! md:px-15! pb-24! pt-14! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
+						<div className="relative! z-3! mx-auto! px-6! md:px-15! pb-24! pt-14! grid! grid-cols-1! gap-10! items-start!">
 							{/* <span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
 								My approach
 							</span> */}
-							<div></div>
 							<p className="text-[clamp(32px,4.5vw,64px)]! font-extrabold! tracking-[-0.03em]! text-ink! leading-[1.1]!">
 								I approach creative marketing as{" "}
 								<span className="text-accent!">applied psychology</span>{" "}
