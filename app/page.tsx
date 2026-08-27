@@ -83,12 +83,16 @@ export default function Home() {
 			<main>
 				{/* ── HERO ── */}
 				<section className="relative! min-h-screen! flex! flex-col! justify-center! overflow-hidden! pt-28! pb-16!">
-					<video
+					{/* <video
 						src="/common/loader_logo.mp4"
 						autoPlay
 						loop
 						muted
 						playsInline
+						className="absolute! inset-0! z-0! h-full! w-full! object-cover!"
+					/> */}
+					<img
+						src={"/common/banner.png"}
 						className="absolute! inset-0! z-0! h-full! w-full! object-cover!"
 					/>
 
@@ -134,9 +138,9 @@ export default function Home() {
 						</div>
 
 						{/* Right side: 3D Floating Cards */}
-						<div className="w-full! lg:w-auto!">
+						{/* <div className="w-full! lg:w-auto!">
 							<HeroCards />
-						</div>
+						</div> */}
 					</div>
 				</section>
 

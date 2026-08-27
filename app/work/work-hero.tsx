@@ -4,7 +4,13 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import Link from "next/link";
 
-export default function WorkHero() {
+interface WorkHeroProps {
+	activeCategory?: "branding" | "graphics" | "logos";
+}
+
+export default function WorkHero({
+	activeCategory = "branding",
+}: WorkHeroProps) {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const { scrollY } = useScroll();
 
@@ -29,46 +35,72 @@ export default function WorkHero() {
 	return (
 		<section
 			ref={containerRef}
-			className="min-h-screen! flex-col! items-center! px-6! md:px-10! py-20! md:py-40! border-b! border-[rgba(242,237,230,0.07)]!"
+			className={`${
+				activeCategory === "branding"
+					? "min-h-screen! py-20! md:py-40!"
+					: "pt-32! md:pt-40! pb-10!"
+			} flex-col! items-center! px-6! md:px-10! border-b! border-[rgba(242,237,230,0.07)]!`}
 		>
-			<div className="flex gap-5 justify-center mb-20">
-				<Link
-					href="/contact"
-					className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5!"
-				>
-					Branding
-				</Link>
-				<Link
-					href="/contact"
-					className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5!"
-				>
-					Graphics
-				</Link>
-				<Link
-					href="/contact"
-					className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5!"
-				>
-					Logos
-				</Link>
-			</div>
 			<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start! w-full!">
-				<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
-					Turning Insight into Impact
-				</span>
-				<h1 className="text-[clamp(32px,8vw,120px)]! font-extrabold! leading-[0.92]! tracking-[-0.03em]! capitalize! text-ink!">
-					Case studies demonstrating{" "}
-					<span className="inline-flex! flex-wrap! gap-x-[0.25em]!">
-						{accentWords.map((word, idx) => (
-							<WordWrapper
-								key={idx}
-								word={word}
-								index={idx}
-								activeIndexTransform={activeIndexTransform}
-							/>
-						))}
-					</span>
-				</h1>
+				<div></div>
+				<div
+					className={`flex gap-4 sm:gap-5 justify-start ${
+						activeCategory === "branding" ? "mb-20" : "mb-0"
+					} flex-wrap`}
+				>
+					<Link
+						href="/work"
+						className={`uppercase! inline-flex! items-center! justify-center! px-8! py-4! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! rounded-sm! ${
+							activeCategory === "branding"
+								? "bg-accent! text-ink! shadow-lg!"
+								: "bg-white/10! text-white/70! hover:bg-white/20! hover:text-ink!"
+						}`}
+					>
+						Branding
+					</Link>
+					<Link
+						href="/graphics"
+						className={`uppercase! inline-flex! items-center! justify-center! px-8! py-4! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! rounded-sm! ${
+							activeCategory === "graphics"
+								? "bg-accent! text-ink! shadow-lg!"
+								: "bg-white/10! text-white/70! hover:bg-white/20! hover:text-ink!"
+						}`}
+					>
+						Graphic
+					</Link>
+					<Link
+						href="/logo"
+						className={`uppercase! inline-flex! items-center! justify-center! px-8! py-4! text-base! font-bold! tracking-[0.14em]! transition-all! duration-300! rounded-sm! ${
+							activeCategory === "logos"
+								? "bg-accent! text-ink! shadow-lg!"
+								: "bg-white/10! text-white/70! hover:bg-white/20! hover:text-ink!"
+						}`}
+					>
+						Logos
+					</Link>
+				</div>
 			</div>
+
+			{activeCategory === "branding" && (
+				<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start! w-full!">
+					<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
+						Turning Insight into Impact
+					</span>
+					<h1 className="text-[clamp(32px,8vw,120px)]! font-extrabold! leading-[0.92]! tracking-[-0.03em]! capitalize! text-ink!">
+						Case studies demonstrating{" "}
+						<span className="inline-flex! flex-wrap! gap-x-[0.25em]!">
+							{accentWords.map((word, idx) => (
+								<WordWrapper
+									key={idx}
+									word={word}
+									index={idx}
+									activeIndexTransform={activeIndexTransform}
+								/>
+							))}
+						</span>
+					</h1>
+				</div>
+			)}
 		</section>
 	);
 }

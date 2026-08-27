@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 
 const NAV_LINKS = [
-	{ label: "About", href: "/about" },
 	{ label: "Work", href: "/work" },
+	{ label: "About", href: "/about" },
 	{ label: "Contact", href: "/contact" },
 ];
 

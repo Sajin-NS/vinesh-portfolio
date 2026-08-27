@@ -54,7 +54,7 @@ export default function Preloader() {
 						</motion.div>
 
 						{/* Fading and translating branding text */}
-						<motion.div
+						{/* <motion.div
 							initial={{ opacity: 0, y: 15 }}
 							animate={{
 								opacity: 1,
@@ -73,7 +73,7 @@ export default function Preloader() {
 							<p className="text-[11px]! font-medium! tracking-[0.2em]! text-accent! capitalize! mt-2.5!">
 								Creative Marketing
 							</p>
-						</motion.div>
+						</motion.div> */}
 					</div>
 				</motion.div>
 			)}

@@ -74,59 +74,32 @@ export default function WorkPage() {
 									))}
 								</div>
 
-								{/* Gallery */}
-								<div className="grid! grid-cols-1! md:grid-cols-4! gap-6! mt-14! items-end!">
-									{/* Image 1: Left (Narrow, Tall) */}
-									<Link
-										href={`/work/${c.case_slug}`}
-										className="relative! block! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! group! h-80! md:h-110! md:col-span-1! cursor-pointer!"
-									>
-										<Image
-											src={c.gallery[0]}
-											alt={`${c.title} Detail 1`}
-											fill
-											className="object-cover! group-hover:scale-105! transition-transform! duration-700! ease-out!"
-											sizes="(max-width: 768px) 100vw, 25vw"
-										/>
-										<div className="absolute! inset-0! bg-black/20! group-hover:bg-black/0! transition-colors! duration-500!" />
-									</Link>
+								{/* Gallery (First 3 Equal Size Images) */}
+								<div className="grid! grid-cols-1! md:grid-cols-3! gap-6! mt-14! items-stretch!">
+									{c.gallery.slice(0, 3).map((imgSrc, imgIdx) => (
+										<Link
+											key={imgIdx}
+											href={`/work/${c.case_slug}`}
+											className="relative! block! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! group! h-70! md:h-95! cursor-pointer!"
+										>
+											<Image
+												src={imgSrc}
+												alt={`${c.title} Detail ${imgIdx + 1}`}
+												fill
+												className="object-cover! group-hover:scale-105! transition-transform! duration-700! ease-out!"
+												sizes="(max-width: 768px) 100vw, 33vw"
+											/>
+											<div className="absolute! inset-0! bg-black/20! group-hover:bg-black/0! transition-colors! duration-500!" />
 
-									{/* Image 2: Center (Wide, Very Tall) */}
-									<Link
-										href={`/work/${c.case_slug}`}
-										className="relative! block! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! group! h-70! md:h-95! md:col-span-2! cursor-pointer!"
-									>
-										<Image
-											src={c.gallery[1]}
-											alt={`${c.title} Detail 2`}
-											fill
-											className="object-cover! group-hover:scale-105! transition-transform! duration-700! ease-out!"
-											sizes="(max-width: 768px) 100vw, 50vw"
-										/>
-										<div className="absolute! inset-0! bg-black/20! group-hover:bg-black/0! transition-colors! duration-500!" />
-
-										{/* Explore Case Study Hover overlay button */}
-										<div className="absolute! bottom-6! left-6! z-2! opacity-0! group-hover:opacity-100! transition-opacity! duration-500! hidden! md:block!">
-											<span className="text-[12px]! font-bold! tracking-widest! uppercase! bg-accent! text-ink! px-3! py-1.5! rounded-sm!">
-												Explore Case Study
-											</span>
-										</div>
-									</Link>
-
-									{/* Image 3: Right (Narrow, Shorter) */}
-									<Link
-										href={`/work/${c.case_slug}`}
-										className="relative! block! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! group! h-70! md:h-95! md:col-span-1! cursor-pointer!"
-									>
-										<Image
-											src={c.gallery[2]}
-											alt={`${c.title} Detail 3`}
-											fill
-											className="object-cover! group-hover:scale-105! transition-transform! duration-700! ease-out!"
-											sizes="(max-width: 768px) 100vw, 25vw"
-										/>
-										<div className="absolute! inset-0! bg-black/20! group-hover:bg-black/0! transition-colors! duration-500!" />
-									</Link>
+											{imgIdx === 1 && (
+												<div className="absolute! bottom-6! left-6! z-2! opacity-0! group-hover:opacity-100! transition-opacity! duration-500! hidden! md:block!">
+													<span className="text-[12px]! font-bold! tracking-widest! uppercase! bg-accent! text-ink! px-3! py-1.5! rounded-sm!">
+														Explore Case Study
+													</span>
+												</div>
+											)}
+										</Link>
+									))}
 								</div>
 
 								{/* View All Button */}
@@ -157,7 +130,7 @@ export default function WorkPage() {
 				))}
 
 				{/* ── CATEGORY: LOGOS ── */}
-				<FadeInSection>
+				{/* <FadeInSection>
 					<section
 						className={`py-14! px-6! md:px-10! border-b! ${BORDER}`}
 					>
@@ -170,15 +143,14 @@ export default function WorkPage() {
 							</h2>
 						</div>
 					</section>
-				</FadeInSection>
+				</FadeInSection> */}
 
 				{/* ── LATEST LOGO WORKS ── */}
-				<FadeInSection>
+				{/* <FadeInSection>
 					<section
 						className={`py-25! px-6! md:px-10! border-b! ${BORDER}`}
 					>
 						<div className="max-w-360! mx-auto!">
-							{/* Header row */}
 							<div className="grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start! mb-14!">
 								<span className="text-xl! font-bold! text-accent! tracking-widest! capitalize!">
 									logo
@@ -198,7 +170,6 @@ export default function WorkPage() {
 								</div>
 							</div>
 
-							{/* Description */}
 							<p className="text-[clamp(18px,2.2vw,28px)]! font-bold! text-ink! leading-[1.3]! tracking-[-0.02em]! max-w-225! ml-auto!">
 								A curated selection of logos, symbols, and wordmarks
 								designed to encapsulate brand essence, facilitate
@@ -206,7 +177,6 @@ export default function WorkPage() {
 								connections.
 							</p>
 
-							{/* Gallery (3 logos) */}
 							<div className="grid! grid-cols-1! md:grid-cols-3! gap-6! mt-14! items-stretch!">
 								{[
 									{ src: "/logo/img3.jpg", title: "Identity Mark 1" },
@@ -225,12 +195,10 @@ export default function WorkPage() {
 											className="object-cover! group-hover:scale-105! transition-transform! duration-700! ease-out!"
 											sizes="(max-width: 768px) 100vw, 33vw"
 										/>
-										{/* <div className="absolute! inset-0! bg-black/20! group-hover:bg-black/0! transition-colors! duration-500!" /> */}
 									</Link>
 								))}
 							</div>
 
-							{/* View All Button */}
 							<div className="mt-14! flex! justify-end!">
 								<Link
 									href="/logo"
@@ -254,7 +222,7 @@ export default function WorkPage() {
 							</div>
 						</div>
 					</section>
-				</FadeInSection>
+				</FadeInSection> */}
 			</main>
 
 			<Footer />
