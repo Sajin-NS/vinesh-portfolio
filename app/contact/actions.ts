@@ -153,7 +153,7 @@ vichuzstudio@gmail.com
 			</p>
 
 			<div style="border-top: 1px solid rgba(29,29,31,0.08); padding-top: 20px; margin-top: 28px;">
-				<p style="font-size: 15px; font-weight: bold; color: #1d1d1f; margin: 0;">Vichu</p>
+				<p style="font-size: 15px; font-weight: bold; color: #1d1d1f; margin: 0;">Vinesh</p>
 				<p style="font-size: 13px; color: #86868b; margin: 2px 0 0 0;">Creative Direction · Brand Systems · Digital Experiences</p>
 				<p style="font-size: 13px; color: #e05a44; margin: 6px 0 0 0;"><a href="mailto:vichuzstudio@gmail.com" style="color: #e05a44; text-decoration: none;">vichuzstudio@gmail.com</a></p>
 			</div>
