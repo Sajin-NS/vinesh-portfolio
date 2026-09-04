@@ -49,7 +49,7 @@ export default function Preloader() {
 							<img
 								src={`/common/white-logo.png`}
 								alt="Vinesh Studio Logo"
-								className="h-full w-full"
+								className="h-full w-full brightness-0!"
 							/>
 						</motion.div>
 

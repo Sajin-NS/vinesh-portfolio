@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 export default function GraphicsPage() {
-	const BORDER = "border-[rgba(242,237,230,0.07)]!";
+	const BORDER = "border-[rgba(29,29,31,0.08)]!";
 
 	return (
 		<div className="min-h-screen! bg-bg!">
@@ -22,14 +22,14 @@ export default function GraphicsPage() {
 				<WorkHero activeCategory="graphics" />
 
 				{/* ── HEADER & INDEX ── */}
-				<section className="px-6! md:px-10! py-14! border-b! border-[rgba(242,237,230,0.07)]!">
+				<section className="px-6! md:px-10! py-14! border-b! border-[rgba(29,29,31,0.08)]!">
 					<div className="max-w-360! mx-auto!">
 						<div className="grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-6! items-start!">
 							<span className="text-xl! font-bold! text-accent! tracking-widest! uppercase! pt-2!">
 								GRAPHIC
 							</span>
 							<div>
-								<span className="text-sm! text-white/40! font-bold! tracking-widest! uppercase! block! mb-4!">
+								<span className="text-sm! text-ink/50! font-bold! tracking-widest! uppercase! block! mb-4!">
 									Graphic Design Showcase
 								</span>
 								<h1 className="text-[clamp(30px,7vw,100px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
@@ -43,7 +43,7 @@ export default function GraphicsPage() {
 				{/* ── OVERVIEW ── */}
 				<section className={`py-16! px-6! md:px-10! border-b! ${BORDER}`}>
 					<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-12! items-start!">
-						<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
+						<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! pt-2!">
 							Visual Systems &amp; Key Art
 						</span>
 						<div>
@@ -60,7 +60,7 @@ export default function GraphicsPage() {
 				<section className={`py-20! px-6! md:px-10! border-b! ${BORDER}`}>
 					<div className="max-w-360! mx-auto!">
 						<div className="mb-14!">
-							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! block! mb-2!">
+							<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! block! mb-2!">
 								Graphic Gallery
 							</span>
 							<h2 className="text-[32px]! font-extrabold! tracking-[-0.02em]! text-ink!">

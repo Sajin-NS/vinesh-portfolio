@@ -106,8 +106,8 @@ export default function HeroCards() {
 						/>
 
 						{/* Badge Pill */}
-						<div className="relative z-10 self-start bg-[#0e1218]/80 backdrop-blur-md border border-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl">
-							<span className="text-[10px] sm:text-xs font-extrabold tracking-wider sm:tracking-widest text-[#f2ede6] uppercase">
+						<div className="relative z-10 self-start bg-white/90 backdrop-blur-md border border-black/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl shadow-xs">
+							<span className="text-[10px] sm:text-xs font-extrabold tracking-wider sm:tracking-widest text-[#1D1D1F] uppercase">
 								{card.title}
 							</span>
 						</div>

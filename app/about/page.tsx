@@ -10,7 +10,7 @@ export const metadata = {
 		"10+ years of creative leadership across brand identity, campaign design, and digital-first marketing.",
 };
 
-const BORDER = "border-[rgba(242,237,230,0.07)]!";
+const BORDER = "border-[rgba(29,29,31,0.08)]!";
 
 const STORY = [
 	{
@@ -60,11 +60,11 @@ export default function AboutPage() {
 				{/* ── HERO ── */}
 				<section className="relative! min-h-screen! flex! items-end! overflow-hidden!">
 					<img
-						className="absolute! inset-0! z-0! min-h-screen!"
+						className="absolute! inset-0! z-0! min-h-screen! object-cover! w-full!"
 						src={`/common/home-banner.png`}
 					/>
-					<div className="absolute! inset-0! bg-[radial-gradient(ellipse_70%_60%_at_60%_30%,rgba(40,60,90,0.6)_0%,transparent_70%)]! z-0!" />
-					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(14,18,24,0.2)]! via-[rgba(14,18,24,0.8)]! to-bg! z-1!" />
+					<div className="absolute! inset-0! bg-[radial-gradient(ellipse_70%_60%_at_60%_30%,rgba(224,90,68,0.12)_0%,transparent_70%)]! z-0!" />
+					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(245,245,247,0.2)]! via-[rgba(245,245,247,0.8)]! to-bg! z-1!" />
 
 					<div className="relative! z-2! w-full! max-w-360! mx-auto! px-6! md:px-10! pb-20! flex! justify-between! items-end! flex-col! md:flex-row! gap-5!">
 						<h1 className="text-[clamp(52px,9vw,110px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
@@ -72,7 +72,7 @@ export default function AboutPage() {
 							<br />
 							of <span className="text-accent!">Craft</span>
 						</h1>
-						<span className="text-[13px]! font-semibold! text-white/50! tracking-[0.08em]!">
+						<span className="text-[13px]! font-semibold! text-ink/60! tracking-[0.08em]!">
 							Scroll down ↓
 						</span>
 					</div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
 				<FadeInSection>
 					<div className={`border-b! ${BORDER} py-30! px-6! md:px-10!`}>
 						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
-							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
+							<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! pt-2!">
 								Insight
 							</span>
 							<p className="text-[clamp(40px,6vw,90px)]! font-extrabold! leading-[0.93]! tracking-[-0.03em]! capitalize! text-ink!">
@@ -97,33 +97,11 @@ export default function AboutPage() {
 					</div>
 				</FadeInSection>
 
-				{/* ── PHOTO ROW ── */}
-				{/* <FadeInSection>
-					<div className="grid! grid-cols-1! md:grid-cols-3! gap-1! h-auto! md:h-100!">
-						{PHOTO_TILES.map(({ bg, label }) => (
-							<Link
-								href={"/work"}
-								key={label}
-								className="relative! overflow-hidden! group! min-h-50! md:min-h-0!"
-							>
-								<div
-									className="absolute! inset-0! flex! items-end! p-5! transition-transform! duration-500! group-hover:scale-105!"
-									style={{ background: bg }}
-								>
-									<span className="text-[11px]! font-bold! tracking-[0.12em]! capitalize! text-[rgba(242,237,230,0.4)]!">
-										{label}
-									</span>
-								</div>
-							</Link>
-						))}
-					</div>
-				</FadeInSection> */}
-
 				{/* ── PHILOSOPHY ── */}
 				<FadeInSection>
 					<div className={`border-b! ${BORDER} py-30! px-6! md:px-10!`}>
 						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
-							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
+							<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! pt-2!">
 								Philosophy
 							</span>
 							<p className="text-[clamp(32px,4.5vw,64px)]! font-extrabold! tracking-[-0.03em]! text-ink! leading-[1.15]!">
@@ -152,14 +130,14 @@ export default function AboutPage() {
 										i < STORY.length - 1 ? `border-b! ${BORDER}` : ""
 									} ${i === 0 ? "pt-0!" : ""} ${i === STORY.length - 1 ? "pb-0!" : ""}`}
 								>
-									<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
+									<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! pt-2!">
 										{label}
 									</span>
 									<div>
 										<h3 className="text-[clamp(22px,3vw,40px)]! font-bold! tracking-[-0.02em]! text-ink! leading-[1.05]! mb-5!">
 											{title}
 										</h3>
-										<p className="text-[clamp(16px,1.8vw,22px)]! text-white/50! leading-[1.55]! max-w-175!">
+										<p className="text-[clamp(16px,1.8vw,22px)]! text-ink/70! leading-[1.55]! max-w-175!">
 											{body}
 										</p>
 									</div>
@@ -175,7 +153,7 @@ export default function AboutPage() {
 						className={`border-b! ${BORDER} py-30! px-6! md:px-10!`}
 					>
 						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10!">
-							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
+							<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! pt-2!">
 								Capabilities
 							</span>
 							<div className="flex! flex-col!">
@@ -189,7 +167,7 @@ export default function AboutPage() {
 										<span className="text-[12px]! font-bold! text-dim! tracking-[0.08em]! w-7!">
 											{String(i + 1).padStart(2, "0")}
 										</span>
-										<span className="text-[clamp(18px,2.5vw,32px)]! font-extrabold! tracking-tight! capitalize! text-white/50! hover:text-ink! transition-colors! duration-300!">
+										<span className="text-[clamp(18px,2.5vw,32px)]! font-extrabold! tracking-tight! capitalize! text-ink/70! group-hover:text-ink! transition-colors! duration-300!">
 											{cap}
 										</span>
 										<span className="text-xl! text-dim! group-hover:text-accent! group-hover:translate-x-1! group-hover:-translate-y-1! transition-all! duration-300!">
@@ -205,13 +183,13 @@ export default function AboutPage() {
 				{/* ── CTA ── */}
 				<FadeInSection>
 					<div className="py-25! px-6! md:px-10! text-center!">
-						<p className="text-[clamp(32px,4.5vw,64px)]! font-extrabold! tracking-[-0.03em]! text-white/50! mb-10!">
+						<p className="text-[clamp(32px,4.5vw,64px)]! font-extrabold! tracking-[-0.03em]! text-ink/70! mb-10!">
 							Ready to build something{" "}
 							<span className="text-accent!">exceptional?</span>
 						</p>
 						<Link
 							href="/contact"
-							className="inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-ink! text-[11px]! font-bold! tracking-[0.14em]! capitalize! hover:bg-[#c94a36]! hover:-translate-y-0.5! transition-all! duration-300!"
+							className="inline-flex! items-center! justify-center! px-8! py-4! bg-accent! text-white! text-[11px]! font-bold! tracking-[0.14em]! capitalize! hover:bg-[#c94a36]! hover:-translate-y-0.5! transition-all! duration-300! shadow-sm!"
 						>
 							Let&apos;s Connect
 						</Link>

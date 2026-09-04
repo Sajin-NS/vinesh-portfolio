@@ -44,7 +44,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 	const project = PROJECTS[projectIndex];
 	const nextProject = PROJECTS[(projectIndex + 1) % PROJECTS.length];
 
-	const BORDER = "border-[rgba(242,237,230,0.07)]!";
+	const BORDER = "border-[rgba(29,29,31,0.08)]!";
 
 	return (
 		<div className="min-h-screen! bg-bg!">
@@ -52,11 +52,11 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
 			<main className="pt-35! md:pt-45!">
 				{/* ── HEADER & BACK NAVIGATION ── */}
-				<section className="px-6! md:px-10! pb-14! border-b! border-[rgba(242,237,230,0.07)]!">
+				<section className="px-6! md:px-10! pb-14! border-b! border-[rgba(29,29,31,0.08)]!">
 					<div className="max-w-360! mx-auto!">
 						<Link
 							href="/work"
-							className="inline-flex! items-center! gap-2! text-white/50! hover:text-accent! transition-colors! duration-300! text-base! font-semibold! tracking-[0.06em]! mb-10! group!"
+							className="inline-flex! items-center! gap-2! text-ink/60! hover:text-accent! transition-colors! duration-300! text-base! font-semibold! tracking-[0.06em]! mb-10! group!"
 						>
 							<svg
 								className="w-4! h-4! transition-transform! duration-300! group-hover:-translate-x-1!"
@@ -79,7 +79,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 								{project.num}
 							</span>
 							<div>
-								<span className="text-[14px]! text-white/40! font-bold! tracking-widest! uppercase! block! mb-4!">
+								<span className="text-[14px]! text-ink/50! font-bold! tracking-widest! uppercase! block! mb-4!">
 									{project.subtitle}
 								</span>
 								<h1 className="text-[clamp(30px,7vw,100px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
@@ -93,7 +93,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 				{/* ── PROJECT DETAILS ── */}
 				<section className={`py-20! px-6! md:px-10! border-b! ${BORDER}`}>
 					<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-12! items-start!">
-						<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! pt-2!">
+						<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! pt-2!">
 							The Overview
 						</span>
 						<div>
@@ -112,7 +112,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 				<section className={`py-20! px-6! md:px-10! border-b! ${BORDER}`}>
 					<div className="max-w-360! mx-auto!">
 						<div className="mb-14!">
-							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]! block! mb-2!">
+							<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! block! mb-2!">
 								The Case Study
 							</span>
 							<h2 className="text-[32px]! font-extrabold! tracking-[-0.02em]! text-ink!">
@@ -128,7 +128,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 				</section>
 
 				{/* ── NEXT PROJECT TRANSITION CARD ── */}
-				<section className="py-30! px-6! md:px-10! bg-card/20! relative! overflow-hidden! group! border-b! border-[rgba(242,237,230,0.07)]!">
+				<section className="py-30! px-6! md:px-10! bg-white/80! relative! overflow-hidden! group! border-b! border-[rgba(29,29,31,0.08)]!">
 					<div className="max-w-360! mx-auto! flex! flex-col! items-center! text-center! relative! z-2!">
 						<span className="text-xl! font-bold! text-accent! tracking-widest! uppercase! mb-4!">
 							Up Next

@@ -13,7 +13,7 @@ export const metadata = {
 		"Case studies demonstrating how strategic creative thinking transforms business outcomes.",
 };
 
-const BORDER = "border-[rgba(242,237,230,0.07)]!";
+const BORDER = "border-[rgba(29,29,31,0.08)]!";
 
 export default function WorkPage() {
 	return (
@@ -61,14 +61,14 @@ export default function WorkPage() {
 												{c.title}
 											</Link>
 										</h2>
-										<p className="text-[18px]! text-white/50! mt-3! tracking-[0.04em]!">
+										<p className="text-[18px]! text-ink/60! mt-3! tracking-[0.04em]!">
 											{c.subtitle}
 										</p>
 									</div>
 								</div>
 
 								{/* Description */}
-								<div className="text-[clamp(14px,2.2vw,25px)]! font-bold! text-white/70! leading-[1.3]! tracking-[-0.02em]! max-w-284! ml-auto! space-y-4!">
+								<div className="text-[clamp(14px,2.2vw,25px)]! font-bold! text-ink/75! leading-[1.3]! tracking-[-0.02em]! max-w-284! ml-auto! space-y-4!">
 									{c.desc.map((p, idx) => (
 										<p key={idx}>{p}</p>
 									))}
@@ -80,7 +80,7 @@ export default function WorkPage() {
 										<Link
 											key={imgIdx}
 											href={`/work/${c.case_slug}`}
-											className="relative! block! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]! group! h-70! md:h-95! cursor-pointer!"
+											className="relative! block! overflow-hidden! rounded-lg! border! border-[rgba(29,29,31,0.08)]! group! h-70! md:h-95! cursor-pointer! bg-card! shadow-xs!"
 										>
 											<Image
 												src={imgSrc}
@@ -89,11 +89,11 @@ export default function WorkPage() {
 												className="object-cover! group-hover:scale-105! transition-transform! duration-700! ease-out!"
 												sizes="(max-width: 768px) 100vw, 33vw"
 											/>
-											<div className="absolute! inset-0! bg-black/20! group-hover:bg-black/0! transition-colors! duration-500!" />
+											<div className="absolute! inset-0! bg-black/10! group-hover:bg-black/0! transition-colors! duration-500!" />
 
 											{imgIdx === 1 && (
 												<div className="absolute! bottom-6! left-6! z-2! opacity-0! group-hover:opacity-100! transition-opacity! duration-500! hidden! md:block!">
-													<span className="text-[12px]! font-bold! tracking-widest! uppercase! bg-accent! text-ink! px-3! py-1.5! rounded-sm!">
+													<span className="text-[12px]! font-bold! tracking-widest! uppercase! bg-accent! text-white! px-3! py-1.5! rounded-sm! shadow-sm!">
 														Explore Case Study
 													</span>
 												</div>

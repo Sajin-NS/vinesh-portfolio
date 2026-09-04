@@ -41,9 +41,9 @@ export default function Nav() {
 					paddingTop: scrolled ? 24 : 24,
 					paddingBottom: scrolled ? 12 : 0,
 					backgroundColor: scrolled
-						? "rgba(14,18,24,0)"
-						: "rgba(14,18,24,0)",
-					backdropFilter: scrolled ? "blur(0px)" : "blur(0px)",
+						? "rgba(245,245,247,0.85)"
+						: "rgba(245,245,247,0)",
+					backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
 				}}
 				transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
 			>
@@ -54,7 +54,7 @@ export default function Nav() {
 						alt="Vinesh Studio"
 						width={100}
 						height={100}
-						className="w-12! h-12! object-contain!"
+						className="w-12! h-12! object-contain! brightness-0!"
 						priority
 					/>
 
@@ -111,7 +111,7 @@ export default function Nav() {
 						transition={{ duration: 0.3 }}
 						className="fixed! inset-0! z-200! cursor-pointer!"
 						style={{
-							background: "rgba(14,18,24,0.75)",
+							background: "rgba(0,0,0,0.35)",
 							backdropFilter: "blur(6px)",
 						}}
 						onClick={() => setSidebarOpen(false)}
@@ -128,11 +128,11 @@ export default function Nav() {
 						animate={{ x: "0%" }}
 						exit={{ x: "100%" }}
 						transition={{ type: "spring", damping: 28, stiffness: 250 }}
-						className="fixed! top-0! right-0! bottom-0! z-210! flex! flex-col! justify-between! px-10! pt-8! pb-10! border-l! border-[rgba(242,237,230,0.07)]!"
+						className="fixed! top-0! right-0! bottom-0! z-210! flex! flex-col! justify-between! px-10! pt-8! pb-10! border-l! border-[rgba(29,29,31,0.08)]! shadow-2xl!"
 						style={{
 							width: "min(400px, 90vw)",
 							background:
-								"linear-gradient(160deg,#161c24 0%,#0e1218 100%)",
+								"linear-gradient(160deg, #ffffff 0%, #f5f5f7 100%)",
 						}}
 					>
 						{/* Sidebar header */}
@@ -175,7 +175,7 @@ export default function Nav() {
 						</nav>
 
 						{/* Sidebar footer */}
-						<div className="border-t! border-[rgba(242,237,230,0.07)]! pt-6!">
+						<div className="border-t! border-[rgba(29,29,31,0.08)]! pt-6!">
 							<a
 								href="mailto:vichuzstudio@gmail.com"
 								className="text-[14px]! font-bold! text-ink! hover:text-accent! transition-colors! duration-200! block! mb-1!"

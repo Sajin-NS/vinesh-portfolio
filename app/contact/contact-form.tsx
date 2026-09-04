@@ -94,7 +94,7 @@ export default function ContactForm() {
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: -15 }}
 						transition={{ duration: 0.4 }}
-						className="border! border-[rgba(242,237,230,0.07)]! bg-card/20! p-10! rounded-lg! text-center! flex! flex-col! items-center! justify-center! gap-6!"
+						className="border! border-[rgba(29,29,31,0.08)]! bg-white! p-10! rounded-lg! text-center! flex! flex-col! items-center! justify-center! gap-6! shadow-sm!"
 					>
 						<div className="w-16! h-16! rounded-full! bg-accent/10! border! border-accent! flex! items-center! justify-center! text-accent! text-3xl! font-semibold!">
 							✓
@@ -103,14 +103,14 @@ export default function ContactForm() {
 							<h3 className="text-2xl! font-bold! text-ink! mb-2!">
 								Message Sent Successfully
 							</h3>
-							<p className="text-sm! text-white/50! max-w-sm! mx-auto! leading-relaxed!">
+							<p className="text-sm! text-ink/60! max-w-sm! mx-auto! leading-relaxed!">
 								Thank you for reaching out! Vinesh will review your
 								inquiry and get back to you within 24 hours.
 							</p>
 						</div>
 						<button
 							onClick={() => setStatus("idle")}
-							className="mt-2! uppercase! inline-flex! items-center! justify-center! px-6! py-3! bg-white/10! text-ink! text-xs! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-white/20! cursor-pointer!"
+							className="mt-2! uppercase! inline-flex! items-center! justify-center! px-6! py-3! bg-black/5! text-ink! text-xs! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-black/10! cursor-pointer! rounded-sm!"
 						>
 							Send Another Message
 						</button>
@@ -135,7 +135,7 @@ export default function ContactForm() {
 						<div className="flex! flex-col! gap-2!">
 							<label
 								htmlFor="name"
-								className="text-xs! font-bold! tracking-widest! uppercase! text-white/40!"
+								className="text-xs! font-bold! tracking-widest! uppercase! text-ink/60!"
 							>
 								Your Name
 							</label>
@@ -145,10 +145,10 @@ export default function ContactForm() {
 								name="name"
 								value={form.name}
 								onChange={handleInputChange}
-								className={`w-full! bg-card/30! border! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! ${
+								className={`w-full! bg-white! border! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! shadow-xs! ${
 									errors.name
 										? "border-accent!"
-										: "border-[rgba(242,237,230,0.07)]! focus:border-accent!"
+										: "border-[rgba(29,29,31,0.12)]! focus:border-accent!"
 								}`}
 								placeholder="Enter your name"
 							/>
@@ -163,7 +163,7 @@ export default function ContactForm() {
 						<div className="flex! flex-col! gap-2!">
 							<label
 								htmlFor="email"
-								className="text-xs! font-bold! tracking-widest! uppercase! text-white/40!"
+								className="text-xs! font-bold! tracking-widest! uppercase! text-ink/60!"
 							>
 								Email Address
 							</label>
@@ -173,10 +173,10 @@ export default function ContactForm() {
 								name="email"
 								value={form.email}
 								onChange={handleInputChange}
-								className={`w-full! bg-card/30! border! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! ${
+								className={`w-full! bg-white! border! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! shadow-xs! ${
 									errors.email
 										? "border-accent!"
-										: "border-[rgba(242,237,230,0.07)]! focus:border-accent!"
+										: "border-[rgba(29,29,31,0.12)]! focus:border-accent!"
 								}`}
 								placeholder="Enter your email"
 							/>
@@ -189,7 +189,7 @@ export default function ContactForm() {
 						<div className="flex! flex-col! gap-2!">
 							<label
 								htmlFor="phone"
-								className="text-xs! font-bold! tracking-widest! uppercase! text-white/40!"
+								className="text-xs! font-bold! tracking-widest! uppercase! text-ink/60!"
 							>
 								Phone Number
 							</label>
@@ -199,10 +199,10 @@ export default function ContactForm() {
 								name="phone"
 								value={form.phone}
 								onChange={handleInputChange}
-								className={`w-full! bg-card/30! border! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! ${
+								className={`w-full! bg-white! border! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! shadow-xs! ${
 									errors.phone
 										? "border-accent!"
-										: "border-[rgba(242,237,230,0.07)]! focus:border-accent!"
+										: "border-[rgba(29,29,31,0.12)]! focus:border-accent!"
 								}`}
 								placeholder="Enter your phone number"
 							/>
@@ -217,7 +217,7 @@ export default function ContactForm() {
 						<div className="flex! flex-col! gap-2!">
 							<label
 								htmlFor="projectType"
-								className="text-xs! font-bold! tracking-widest! uppercase! text-white/40!"
+								className="text-xs! font-bold! tracking-widest! uppercase! text-ink/60!"
 							>
 								What are we building?
 							</label>
@@ -227,25 +227,25 @@ export default function ContactForm() {
 									name="projectType"
 									value={form.projectType}
 									onChange={handleInputChange}
-									className="w-full! bg-card/30! border! border-[rgba(242,237,230,0.07)]! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! appearance-none! focus:border-accent! cursor-pointer!"
+									className="w-full! bg-white! border! border-[rgba(29,29,31,0.12)]! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! appearance-none! focus:border-accent! cursor-pointer! shadow-xs!"
 								>
-									<option value="Branding" className="bg-bg!">
+									<option value="Branding" className="bg-white! text-ink!">
 										Branding & Identity
 									</option>
-									<option value="Web Design" className="bg-bg!">
+									<option value="Web Design" className="bg-white! text-ink!">
 										Web Design & Development
 									</option>
-									<option value="Campaign" className="bg-bg!">
+									<option value="Campaign" className="bg-white! text-ink!">
 										Creative Campaigns
 									</option>
-									<option value="Consultancy" className="bg-bg!">
+									<option value="Consultancy" className="bg-white! text-ink!">
 										Creative Direction
 									</option>
-									<option value="Other" className="bg-bg!">
+									<option value="Other" className="bg-white! text-ink!">
 										Other Projects
 									</option>
 								</select>
-								<div className="absolute! right-5! top-1/2! -translate-y-1/2! pointer-events-none! text-white/40! text-sm!">
+								<div className="absolute! right-5! top-1/2! -translate-y-1/2! pointer-events-none! text-ink/40! text-sm!">
 									▼
 								</div>
 							</div>
@@ -255,7 +255,7 @@ export default function ContactForm() {
 						<div className="flex! flex-col! gap-2!">
 							<label
 								htmlFor="message"
-								className="text-xs! font-bold! tracking-widest! uppercase! text-white/40!"
+								className="text-xs! font-bold! tracking-widest! uppercase! text-ink/60!"
 							>
 								Project Brief
 							</label>
@@ -265,10 +265,10 @@ export default function ContactForm() {
 								rows={5}
 								value={form.message}
 								onChange={handleInputChange}
-								className={`w-full! bg-card/30! border! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! resize-none! ${
+								className={`w-full! bg-white! border! px-5! py-4! text-ink! rounded-lg! outline-none! transition-all! duration-300! text-base! resize-none! shadow-xs! ${
 									errors.message
 										? "border-accent!"
-										: "border-[rgba(242,237,230,0.07)]! focus:border-accent!"
+										: "border-[rgba(29,29,31,0.12)]! focus:border-accent!"
 								}`}
 								placeholder="Describe your project goals or send a quick note..."
 							/>
@@ -283,7 +283,7 @@ export default function ContactForm() {
 						<button
 							type="submit"
 							disabled={status === "loading"}
-							className="uppercase! inline-flex! items-center! justify-center! w-full! py-4! bg-accent! text-ink! text-sm! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5! cursor-pointer! disabled:opacity-50! disabled:pointer-events-none!"
+							className="uppercase! inline-flex! items-center! justify-center! w-full! py-4! bg-accent! text-white! text-sm! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#c94a36]! hover:-translate-y-0.5! cursor-pointer! disabled:opacity-50! disabled:pointer-events-none! shadow-sm!"
 						>
 							{status === "loading" ? "Sending..." : "Submit Inquiry"}
 						</button>
@@ -292,12 +292,12 @@ export default function ContactForm() {
 			</AnimatePresence>
 
 			{/* Divider */}
-			<div className="flex! items-center! gap-4! text-white/20! w-full!">
-				<div className="h-px! bg-[rgba(242,237,230,0.07)]! grow!" />
+			<div className="flex! items-center! gap-4! text-ink/40! w-full!">
+				<div className="h-px! bg-[rgba(29,29,31,0.08)]! grow!" />
 				<span className="text-[10px]! font-bold! uppercase! tracking-widest!">
 					Or Connect Instantly
 				</span>
-				<div className="h-px! bg-[rgba(242,237,230,0.07)]! grow!" />
+				<div className="h-px! bg-[rgba(29,29,31,0.08)]! grow!" />
 			</div>
 
 			{/* WhatsApp Button */}
@@ -305,7 +305,7 @@ export default function ContactForm() {
 				href={whatsappUrl}
 				target="_blank"
 				rel="noopener noreferrer"
-				className="uppercase! inline-flex! items-center! justify-center! gap-3! w-full! py-4! bg-[#25d366]/10! border! border-[#25d366]/30! text-[#25d366]! text-sm! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#25d366]/20! hover:border-[#25d366]! hover:-translate-y-0.5!"
+				className="uppercase! inline-flex! items-center! justify-center! gap-3! w-full! py-4! bg-[#25d366]/10! border! border-[#25d366]/30! text-[#128c7e]! text-sm! font-bold! tracking-[0.14em]! transition-all! duration-300! hover:bg-[#25d366]/20! hover:border-[#25d366]! hover:-translate-y-0.5!"
 			>
 				<FaWhatsapp className="w-5! h-5!" />
 				<span>Chat on WhatsApp</span>

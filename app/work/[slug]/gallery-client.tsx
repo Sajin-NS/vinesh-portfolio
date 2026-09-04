@@ -44,7 +44,7 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 						<div
 							key={idx}
 							onClick={() => setActiveIndex(idx)}
-							className="relative! overflow-hidden! rounded-xl! border! border-[rgba(242,237,230,0.07)]! bg-card! group! cursor-pointer! w-full! transition-all! duration-300!"
+							className="relative! overflow-hidden! rounded-xl! border! border-[rgba(29,29,31,0.08)]! bg-card! group! cursor-pointer! w-full! transition-all! duration-300! shadow-xs!"
 						>
 							<img
 								src={img}
@@ -71,7 +71,7 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 						<button
 							onClick={() => setActiveIndex(null)}
 							aria-label="Close preview"
-							className="absolute! top-6! right-6! z-210! w-12! h-12! flex! items-center! justify-center! text-[36px]! text-ink! hover:text-accent! transition-colors! duration-200! bg-transparent! border-none! cursor-pointer!"
+							className="absolute! top-6! right-6! z-210! w-12! h-12! flex! items-center! justify-center! text-[36px]! text-white! hover:text-accent! transition-colors! duration-200! bg-transparent! border-none! cursor-pointer!"
 						>
 							×
 						</button>
@@ -85,13 +85,11 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 							<button
 								onClick={() =>
 									setActiveIndex((prev) =>
-										prev !== null
-											? (prev - 1 + images.length) % images.length
-											: null,
+										prev !== null ? (prev - 1 + images.length) % images.length : null,
 									)
 								}
 								aria-label="Previous image"
-								className="absolute! left-2! md:-left-15! z-210! w-10! h-10! md:w-12! md:h-12! flex! items-center! justify-center! text-ink! hover:text-accent! transition-colors! duration-200! bg-black/50! hover:bg-black/80! rounded-full! border! border-[rgba(242,237,230,0.1)]! cursor-pointer! text-xl!"
+								className="absolute! left-2! md:-left-15! z-210! w-10! h-10! md:w-12! md:h-12! flex! items-center! justify-center! text-white! hover:text-accent! transition-colors! duration-200! bg-black/50! hover:bg-black/80! rounded-full! border! border-white/20! cursor-pointer! text-xl!"
 							>
 								‹
 							</button>
@@ -103,7 +101,7 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 								animate={{ opacity: 1, scale: 1 }}
 								exit={{ opacity: 0, scale: 0.95 }}
 								transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-								className="relative! overflow-hidden! rounded-lg! border! border-[rgba(242,237,230,0.07)]!"
+								className="relative! overflow-hidden! rounded-lg! border! border-white/15!"
 							>
 								<img
 									src={images[activeIndex]}
@@ -120,14 +118,14 @@ export default function GalleryClient({ images, title }: GalleryClientProps) {
 									)
 								}
 								aria-label="Next image"
-								className="absolute! right-2! md:-right-15! z-210! w-10! h-10! md:w-12! md:h-12! flex! items-center! justify-center! text-ink! hover:text-accent! transition-colors! duration-200! bg-black/50! hover:bg-black/80! rounded-full! border! border-[rgba(242,237,230,0.1)]! cursor-pointer! text-xl!"
+								className="absolute! right-2! md:-right-15! z-210! w-10! h-10! md:w-12! md:h-12! flex! items-center! justify-center! text-white! hover:text-accent! transition-colors! duration-200! bg-black/50! hover:bg-black/80! rounded-full! border! border-white/20! cursor-pointer! text-xl!"
 							>
 								›
 							</button>
 						</div>
 
 						{/* Counter / Label */}
-						<div className="absolute! bottom-6! left-1/2! -translate-x-1/2! z-210! bg-black/40! px-4! py-2! rounded-full! border! border-[rgba(242,237,230,0.07)]! text-sm! font-semibold! tracking-[0.06em]! text-ink/70!">
+						<div className="absolute! bottom-6! left-1/2! -translate-x-1/2! z-210! bg-black/40! px-4! py-2! rounded-full! border! border-white/15! text-sm! font-semibold! tracking-[0.06em]! text-white/80!">
 							{activeIndex + 1} / {images.length}
 						</div>
 					</motion.div>

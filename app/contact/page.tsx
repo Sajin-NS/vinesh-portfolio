@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-	const BORDER = "border-[rgba(242,237,230,0.07)]!";
+	const BORDER = "border-[rgba(29,29,31,0.08)]!";
 
 	return (
 		<div className="min-h-screen! bg-bg!">
@@ -18,14 +18,14 @@ export default function ContactPage() {
 
 			<main className="pt-35! md:pt-45!">
 				{/* ── HEADER & TITLE ── */}
-				<section className="px-6! md:px-10! pb-14! border-b! border-[rgba(242,237,230,0.07)]!">
+				<section className="px-6! md:px-10! pb-14! border-b! border-[rgba(29,29,31,0.08)]!">
 					<div className="max-w-360! mx-auto!">
 						<div className="grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-6! items-start!">
 							<span className="text-xl! font-bold! text-accent! tracking-widest! uppercase! pt-2!">
 								Connect
 							</span>
 							<div>
-								<span className="text-sm! text-white/40! font-bold! tracking-widest! uppercase! block! mb-4!">
+								<span className="text-sm! text-ink/50! font-bold! tracking-widest! uppercase! block! mb-4!">
 									Start a conversation
 								</span>
 								<h1 className="text-[clamp(44px,7vw,100px)]! font-extrabold! leading-[0.9]! tracking-[-0.03em]! capitalize! text-ink!">
@@ -43,7 +43,7 @@ export default function ContactPage() {
 						<div className="flex! flex-col! gap-10!">
 							{/* Email */}
 							<div>
-								<h3 className="text-xs! font-bold! tracking-widest! uppercase! text-white/40! mb-2!">
+								<h3 className="text-xs! font-bold! tracking-widest! uppercase! text-ink/50! mb-2!">
 									Email Address
 								</h3>
 								<a
@@ -54,21 +54,9 @@ export default function ContactPage() {
 								</a>
 							</div>
 
-							{/* Base Locations */}
-							{/* <div>
-								<h3 className="text-xs! font-bold! tracking-widest! uppercase! text-white/40! mb-2!">
-									Location Base
-								</h3>
-								<p className="text-base! font-medium! text-ink! leading-relaxed!">
-									UAE · Dubai
-									<br />
-									India · Kerala
-								</p>
-							</div> */}
-
 							{/* Response time */}
 							<div>
-								<h3 className="text-xs! font-bold! tracking-widest! uppercase! text-white/40! mb-2!">
+								<h3 className="text-xs! font-bold! tracking-widest! uppercase! text-ink/50! mb-2!">
 									Response Time
 								</h3>
 								<p className="text-base! font-medium! text-ink/70! leading-relaxed!">

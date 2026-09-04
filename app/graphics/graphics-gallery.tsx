@@ -130,7 +130,7 @@ export default function GraphicsGallery() {
 					<div
 						key={item.id}
 						onClick={() => setActiveIndex(idx)}
-						className="relative! overflow-hidden! rounded-xl! border! border-[rgba(242,237,230,0.07)]! bg-card! group! cursor-pointer! w-full! transition-all! duration-300!"
+						className="relative! overflow-hidden! rounded-xl! border! border-[rgba(29,29,31,0.08)]! bg-card! group! cursor-pointer! w-full! transition-all! duration-300! shadow-xs!"
 					>
 						<div className="relative! w-full! overflow-hidden!">
 							<img
@@ -140,11 +140,11 @@ export default function GraphicsGallery() {
 							/>
 
 							{/* Mini Hover Label */}
-							<div className="absolute! bottom-4! left-4! md:bottom-6! md:left-6! z-2! opacity-0! group-hover:opacity-100! transition-all! duration-300! translate-y-2! group-hover:translate-y-0! bg-black/60! backdrop-blur-md! px-4! py-2! rounded-md!">
+							<div className="absolute! bottom-4! left-4! md:bottom-6! md:left-6! z-2! opacity-0! group-hover:opacity-100! transition-all! duration-300! translate-y-2! group-hover:translate-y-0! bg-white/90! border! border-black/10! backdrop-blur-md! px-4! py-2! rounded-md! shadow-sm!">
 								<p className="text-xs! md:text-sm! font-extrabold! tracking-widest! uppercase! text-accent!">
 									{item.title}
 								</p>
-								<p className="text-[10px]! md:text-xs! text-ink/60! mt-0.5!">
+								<p className="text-[10px]! md:text-xs! text-ink/70! mt-0.5!">
 									{item.desc}
 								</p>
 							</div>
@@ -168,7 +168,7 @@ export default function GraphicsGallery() {
 						<button
 							onClick={() => setActiveIndex(null)}
 							aria-label="Close preview"
-							className="absolute top-6 right-6 z-[210] w-12 h-12 flex items-center justify-center text-[36px] text-ink hover:text-accent transition-colors bg-transparent border-none cursor-pointer"
+							className="absolute top-6 right-6 z-[210] w-12 h-12 flex items-center justify-center text-[36px] text-white hover:text-accent transition-colors bg-transparent border-none cursor-pointer"
 						>
 							×
 						</button>
@@ -189,7 +189,7 @@ export default function GraphicsGallery() {
 									)
 								}
 								aria-label="Previous image"
-								className="absolute left-2 md:-left-15 z-[210] w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-ink hover:text-accent transition-colors bg-black/50 hover:bg-black/80 rounded-full border border-[rgba(242,237,230,0.1)] cursor-pointer text-xl"
+								className="absolute left-2 md:-left-15 z-[210] w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-white hover:text-accent transition-colors bg-black/50 hover:bg-black/80 rounded-full border border-white/20 cursor-pointer text-xl"
 							>
 								‹
 							</button>
@@ -205,7 +205,7 @@ export default function GraphicsGallery() {
 										duration: 0.35,
 										ease: [0.16, 1, 0.3, 1],
 									}}
-									className="relative overflow-hidden rounded-lg border border-[rgba(242,237,230,0.07)] bg-card"
+									className="relative overflow-hidden rounded-lg border border-white/15 bg-card"
 								>
 									<img
 										src={graphics[activeIndex].src}
@@ -215,10 +215,10 @@ export default function GraphicsGallery() {
 								</motion.div>
 
 								<div className="text-center mt-2">
-									<h4 className="text-lg font-bold text-ink">
+									<h4 className="text-lg font-bold text-white">
 										{graphics[activeIndex].title}
 									</h4>
-									<p className="text-[13px] text-white/50 mt-1">
+									<p className="text-[13px] text-white/70 mt-1">
 										{graphics[activeIndex].desc}
 									</p>
 								</div>
@@ -234,14 +234,14 @@ export default function GraphicsGallery() {
 									)
 								}
 								aria-label="Next image"
-								className="absolute right-2 md:-right-15 z-[210] w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-ink hover:text-accent transition-colors bg-black/50 hover:bg-black/80 rounded-full border border-[rgba(242,237,230,0.1)] cursor-pointer text-xl"
+								className="absolute right-2 md:-right-15 z-[210] w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-white hover:text-accent transition-colors bg-black/50 hover:bg-black/80 rounded-full border border-white/20 cursor-pointer text-xl"
 							>
 								›
 							</button>
 						</div>
 
 						{/* Counter */}
-						<div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[210] bg-black/40 px-4 py-2 rounded-full border border-[rgba(242,237,230,0.07)] text-sm font-semibold tracking-[0.06em] text-ink/70">
+						<div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[210] bg-black/40 px-4 py-2 rounded-full border border-white/15 text-sm font-semibold tracking-[0.06em] text-white/80">
 							{activeIndex + 1} / {graphics.length}
 						</div>
 					</motion.div>

@@ -5,13 +5,13 @@ import { motion, Variants } from "framer-motion";
 
 const logos = [
 	// TOYOTA
-	<div className="flex! items-center! gap-2! text-white/30! hover:text-white/80! transition-colors! duration-300!">
+	<div className="flex! items-center! gap-2! text-ink/35! hover:text-ink/80! transition-colors! duration-300!">
 		<span className="text-[22px]! font-extrabold! tracking-[0.08em]! uppercase! font-sans">
 			TOYOTA
 		</span>
 	</div>,
 	// NEW CAL METALS
-	<div className="flex! items-center! gap-3! text-white/30! hover:text-white/80! transition-colors! duration-300!">
+	<div className="flex! items-center! gap-3! text-ink/35! hover:text-ink/80! transition-colors! duration-300!">
 		<svg
 			className="w-8! h-8!"
 			viewBox="0 0 40 40"
@@ -32,13 +32,13 @@ const logos = [
 		</div>
 	</div>,
 	// PROOF
-	<div className="flex! items-center! gap-1! text-white/30! hover:text-white/80! transition-colors! duration-300!">
+	<div className="flex! items-center! gap-1! text-ink/35! hover:text-ink/80! transition-colors! duration-300!">
 		<span className="text-[28px]! font-light! tracking-[0.15em]! lowercase! font-serif">
 			proof
 		</span>
 	</div>,
 	// CLOUD PATROL
-	<div className="flex! items-center! gap-3! text-white/30! hover:text-white/80! transition-colors! duration-300!">
+	<div className="flex! items-center! gap-3! text-ink/35! hover:text-ink/80! transition-colors! duration-300!">
 		<svg
 			className="w-8! h-8!"
 			viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ const logos = [
 		</span>
 	</div>,
 	// CLOUD VAPORY
-	<div className="flex! items-center! gap-2! text-white/30! hover:text-white/80! transition-colors! duration-300!">
+	<div className="flex! items-center! gap-2! text-ink/35! hover:text-ink/80! transition-colors! duration-300!">
 		<svg
 			className="w-9! h-9!"
 			viewBox="0 0 40 40"
@@ -79,7 +79,7 @@ const logos = [
 		</div>
 	</div>,
 	// FIRESTORM
-	<div className="flex! items-center! gap-2! text-white/30! hover:text-white/80! transition-colors! duration-300!">
+	<div className="flex! items-center! gap-2! text-ink/35! hover:text-ink/80! transition-colors! duration-300!">
 		<svg className="w-7! h-7!" viewBox="0 0 24 24" fill="currentColor">
 			<path d="M12 2C11.5 2.1 8 6.5 8 10c0 2.2 1.8 4 4 4s4-1.8 4-4c0-3.5-3.5-7.9-4-8zm0 13.5c-3.5 0-6.5 2.5-6.5 6.5h13c0-4-3-6.5-6-6.5z" />
 		</svg>

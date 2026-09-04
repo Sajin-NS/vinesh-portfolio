@@ -6,7 +6,7 @@ import FadeInSection from "./components/fade-in-section";
 import ClientMarquee from "./components/client-marquee";
 import HeroCards from "./components/hero-cards";
 
-const BORDER = "border-[rgba(242,237,230,0.07)]!";
+const BORDER = "border-[rgba(29,29,31,0.08)]!";
 
 const TILE_BG = [
 	"linear-gradient(135deg,#1a0e0a,#5c2e1a,#9c5c30)",
@@ -27,51 +27,41 @@ const TESTIMONIALS = [
 	{
 		quote: (
 			<>
-				A{" "}
-				<span className="text-accent!">self-motivated creative leader</span>{" "}
-				whose strategic thinking and design execution help us drive
-				consistent growth.
+				An{" "}
+				<span className="text-accent!">exceptional professional</span> whose
+				creativity, leadership, and ability to handle complex projects set
+				him apart. He consistently delivers outstanding results and inspires
+				those around him.
 			</>
 		),
-		name: "Ahmed Al Farsi",
-		role: "Marketing VP · Hospitality Group",
+		name: "Julio Rafael",
+		role: "Corporate Marketing & Communications Leader · Jannah Hotels + Resorts",
 	},
 	{
 		quote: (
 			<>
-				Vinesh&apos;s{" "}
+				Vinesh consistently demonstrates an{" "}
 				<span className="text-accent!">
-					creative instincts and attention to detail
-				</span>{" "}
-				elevate every project beyond expectations.
+					exceptional level of creativity and innovation
+				</span>
+				. His vision and ability to translate concepts into impactful visual
+				representations greatly contributed to our success.
 			</>
 		),
-		name: "Priya Menon",
-		role: "Brand Director · Lifestyle Brand",
+		name: "Sajeya Khan",
+		role: "HR Manager & Consultant · Emirates Park Zoo and Resort",
 	},
 	{
 		quote: (
 			<>
-				He owns the entire{" "}
-				<span className="text-accent!">
-					creative pipeline — web, social, campaigns
-				</span>{" "}
-				— and bridges discipline and strategy without losing momentum.
+				A creative designer whose skills helped us{" "}
+				<span className="text-accent!">win key business from clients</span>.
+				His attention to detail, tenacity, and proactive attitude are
+				admirable.
 			</>
 		),
-		name: "James Carter",
-		role: "CEO · Digital First Agency",
-	},
-	{
-		quote: (
-			<>
-				Fast with visuals,{" "}
-				<span className="text-accent!">sharp with positioning</span>, and
-				always pushing the brand to look more premium.
-			</>
-		),
-		name: "Sara Al Rashid",
-		role: "CMO · F&B Concept",
+		name: "Siddarth Kamath",
+		role: "S&P (Sourcing and Procurement) CONSULTANT · India Konnekt Enterprises",
 	},
 ];
 
@@ -96,8 +86,8 @@ export default function Home() {
 						className="absolute! inset-0! z-0! h-full! w-full! object-cover!"
 					/>
 
-					{/* Dark gradient overlay */}
-					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(14,18,24,0.4)]! via-[rgba(14,18,24,0.7)]! to-[rgba(14,18,24,0.95)]! z-1!" />
+					{/* Light gradient overlay */}
+					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(245,245,247,0.35)]! via-[rgba(245,245,247,0.75)]! to-[rgba(245,245,247,0.98)]! z-1!" />
 
 					{/* Content */}
 					<div className="relative! z-2! mx-auto! w-full! px-6! md:px-12! grid! grid-cols-1! lg:grid-cols-[1fr_auto]! items-center! gap-10! lg:gap-12!">
@@ -114,7 +104,7 @@ export default function Home() {
 								IMPACT
 							</h1>
 
-							<p className="text-[clamp(16px,1.8vw,21px)]! text-white/70! font-medium! leading-[1.45]! mt-8! max-w-xl!">
+							<p className="text-[clamp(16px,1.8vw,21px)]! text-ink/70! font-medium! leading-[1.45]! mt-8! max-w-xl!">
 								I shape brand identities, campaign visuals, social
 								systems, pitch decks, and AI-powered creative direction
 								for hospitality, lifestyle, and digital-first
@@ -124,13 +114,13 @@ export default function Home() {
 							<div className="flex! flex-wrap! items-center! gap-4! mt-8!">
 								<Link
 									href="/work"
-									className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-[#f2ede6]! text-[#0e1218]! text-xs! font-extrabold! tracking-[0.14em]! rounded-full! transition-all! duration-300! hover:bg-accent! hover:text-ink! hover:scale-105!"
+									className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! bg-[#1D1D1F]! text-[#F5F5F7]! text-xs! font-extrabold! tracking-[0.14em]! rounded-full! transition-all! duration-300! hover:bg-accent! hover:text-white! hover:scale-105! shadow-sm!"
 								>
 									VIEW SELECTED WORK
 								</Link>
 								<Link
 									href="#positioning"
-									className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! border! border-white/25! text-ink! text-xs! font-extrabold! tracking-[0.14em]! rounded-full! transition-all! duration-300! hover:border-accent! hover:text-accent! hover:scale-105!"
+									className="uppercase! inline-flex! items-center! justify-center! px-8! py-4! border! border-[rgba(29,29,31,0.2)]! text-ink! text-xs! font-extrabold! tracking-[0.14em]! rounded-full! transition-all! duration-300! hover:border-accent! hover:text-accent! hover:scale-105!"
 								>
 									WHAT I DO
 								</Link>
@@ -168,14 +158,14 @@ export default function Home() {
 									</span>
 								</h2>
 
-								<p className="text-[clamp(18px,2.2vw,24px)]! text-white/70! font-medium! leading-[1.4]! mt-8! max-w-2xl!">
+								<p className="text-[clamp(18px,2.2vw,24px)]! text-ink/70! font-medium! leading-[1.4]! mt-8! max-w-2xl!">
 									I help brands move from basic visuals to a sharper
 									creative system — the idea, the look, the content,
 									and the final presentation working together.
 								</p>
 
 								{/* Brand / Capability Grid */}
-								<div className="mt-14! rounded-2xl! border! border-[rgba(242,237,230,0.12)]! bg-[#121720]/80! backdrop-blur-md! overflow-hidden! grid! grid-cols-2! sm:grid-cols-3! lg:grid-cols-6!">
+								<div className="mt-14! rounded-2xl! border! border-[rgba(29,29,31,0.08)]! bg-white/80! backdrop-blur-md! overflow-hidden! grid! grid-cols-2! sm:grid-cols-3! lg:grid-cols-6! shadow-xs!">
 									{[
 										"CAPITAL MOTION",
 										"SOSOCIAL",
@@ -192,7 +182,7 @@ export default function Home() {
 									].map((item, idx) => (
 										<div
 											key={idx}
-											className="p-6! text-center! text-xs! sm:text-sm! font-extrabold! tracking-wider! text-ink! border-b! border-r! border-[rgba(242,237,230,0.08)]! hover:bg-accent/10! hover:text-accent! transition-colors! duration-300! flex! items-center! justify-center! min-h-[90px]!"
+											className="p-6! text-center! text-xs! sm:text-sm! font-extrabold! tracking-wider! text-ink! border-b! border-r! border-[rgba(29,29,31,0.06)]! hover:bg-accent/10! hover:text-accent! transition-colors! duration-300! flex! items-center! justify-center! min-h-[90px]!"
 										>
 											{item}
 										</div>
@@ -396,7 +386,7 @@ export default function Home() {
 				<FadeInSection>
 					<div className={`border-b! ${BORDER} py-30!`}>
 						<div className="max-w-360! mx-auto! px-6! md:px-15! mb-14!">
-							<span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
+							<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]!">
 								Testimonials
 							</span>
 						</div>
@@ -408,7 +398,7 @@ export default function Home() {
 							{TESTIMONIALS.map(({ quote, name, role }, i) => (
 								<div
 									key={i}
-									className="shrink-0! w-[min(460px,80vw)]! bg-card! border! border-[rgba(242,237,230,0.07)]! p-10! flex! flex-col! gap-8! hover:border-accent! transition-colors! duration-300!"
+									className="shrink-0! w-[min(460px,80vw)]! bg-card! border! border-[rgba(29,29,31,0.08)]! p-10! flex! flex-col! gap-8! hover:border-accent! transition-colors! duration-300! shadow-xs!"
 								>
 									<span className="text-5xl! text-accent! font-black! leading-none!">
 										&ldquo;
@@ -420,7 +410,7 @@ export default function Home() {
 										<p className="text-[15px]! font-bold! text-ink!">
 											{name}
 										</p>
-										<p className="text-[13px]! text-white/50! mt-0.5!">
+										<p className="text-[13px]! text-ink/60! mt-0.5!">
 											{role}
 										</p>
 									</div>

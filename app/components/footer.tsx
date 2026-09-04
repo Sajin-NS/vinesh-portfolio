@@ -5,11 +5,11 @@ import { FaInstagram, FaLinkedinIn, FaBehance } from "react-icons/fa";
 export default function Footer() {
 	return (
 		<footer
-			className="bg-bg! border-t! border-[rgba(242,237,230,0.07)]! px-10! pt-20! overflow-hidden!"
+			className="bg-bg! border-t! border-[rgba(29,29,31,0.08)]! px-10! pt-20! overflow-hidden!"
 			id="contact"
 		>
 			{/* ── Top grid: label | menu | contact ── */}
-			<div className="max-w-360! mx-auto! grid! grid-cols-1! lg:grid-cols-[260px_1fr_1fr]! gap-10! pb-20! border-b! border-[rgba(242,237,230,0.07)]!">
+			<div className="max-w-360! mx-auto! grid! grid-cols-1! lg:grid-cols-[260px_1fr_1fr]! gap-10! pb-20! border-b! border-[rgba(29,29,31,0.08)]!">
 				{/* Label */}
 				<div></div>
 
@@ -34,7 +34,7 @@ export default function Footer() {
 				<div className="flex! flex-col! gap-7!">
 					{/* Email */}
 					<div>
-						<p className="text-[12px]! font-semibold! tracking-widest! capitalize! text-white/50! mb-1.5!">
+						<p className="text-[12px]! font-semibold! tracking-widest! capitalize! text-ink/60! mb-1.5!">
 							Email:
 						</p>
 						<a
@@ -47,10 +47,10 @@ export default function Footer() {
 
 					{/* Based in */}
 					<div>
-						<p className="text-[12px]! font-semibold! tracking-widest! capitalize! text-white/50! mb-1.5!">
+						<p className="text-[12px]! font-semibold! tracking-widest! capitalize! text-ink/60! mb-1.5!">
 							Based In:
 						</p>
-						<p className="text-[clamp(14px,1.8vw,20px)]! text-white/50! leading-[1.4]!">
+						<p className="text-[clamp(14px,1.8vw,20px)]! text-ink/60! leading-[1.4]!">
 							Available for brand,
 							<br className="hidden! sm:block!" /> campaign &amp;
 							creative direction projects.
@@ -59,19 +59,19 @@ export default function Footer() {
 
 					{/* Socials */}
 					<div>
-						<p className="text-[12px]! font-semibold! tracking-widest! capitalize! text-white/50! mb-3!">
+						<p className="text-[12px]! font-semibold! tracking-widest! capitalize! text-ink/60! mb-3!">
 							Follow Me:
 						</p>
 						<div className="flex! gap-3! flex-wrap!">
 							{[
 								{
 									name: "Instagram",
-									href: "https://www.instagram.com/vinesh_n_s/",
+									href: "https://www.instagram.com/vichuzx/",
 									icon: <FaInstagram className="w-5! h-5!" />,
 								},
 								{
 									name: "LinkedIn",
-									href: "https://www.linkedin.com/in/vinesh",
+									href: "https://www.linkedin.com/in/vineshcherumadathil/",
 									icon: <FaLinkedinIn className="w-5! h-5!" />,
 								},
 								// {
@@ -86,7 +86,7 @@ export default function Footer() {
 									target="_blank"
 									rel="noopener noreferrer"
 									aria-label={name}
-									className="w-11! h-11! rounded-full! border! border-[rgba(242,237,230,0.07)]! flex! items-center! justify-center! text-white/50! hover:border-ink! hover:text-accent! transition-all! duration-300!"
+									className="w-11! h-11! rounded-full! border! border-[rgba(29,29,31,0.12)]! flex! items-center! justify-center! text-ink/70! hover:border-ink! hover:text-accent! hover:bg-black/5! transition-all! duration-300!"
 								>
 									{icon}
 								</a>
@@ -101,7 +101,7 @@ export default function Footer() {
 				className="text-[clamp(80px,16vw,260px)]! font-extrabold! tracking-[-0.04em]! capitalize! leading-[0.85]! whitespace-nowrap! overflow-hidden! select-none!"
 				style={{
 					color: "transparent",
-					WebkitTextStroke: "1px rgba(242,237,230,0.2)",
+					WebkitTextStroke: "2px black",
 				}}
 			>
 				VichuStudio
