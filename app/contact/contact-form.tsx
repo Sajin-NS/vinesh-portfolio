@@ -78,7 +78,7 @@ export default function ContactForm() {
 	};
 
 	// Prefilled message for WhatsApp connection
-	const whatsappNumber = "971501234567"; // Placeholder UAE number, easy to update
+	const whatsappNumber = "971585367736"; // Placeholder UAE number, easy to update
 	const prefilledText = encodeURIComponent(
 		"Hello Vinesh, I visited your portfolio and would love to connect about a brand/design project!",
 	);
@@ -126,7 +126,8 @@ export default function ContactForm() {
 					>
 						{status === "error" && (
 							<div className="p-4! bg-accent/10! border! border-accent/30! rounded-lg! text-accent! text-sm! font-semibold! leading-relaxed!">
-								Something went wrong while sending your message. Please try again or reach out directly via WhatsApp below.
+								Something went wrong while sending your message. Please
+								try again or reach out directly via WhatsApp below.
 							</div>
 						)}
 

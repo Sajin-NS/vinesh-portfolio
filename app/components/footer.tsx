@@ -71,14 +71,14 @@ export default function Footer() {
 								},
 								{
 									name: "LinkedIn",
-									href: "https://www.linkedin.com/in/vinesh-ns",
+									href: "https://www.linkedin.com/in/vinesh",
 									icon: <FaLinkedinIn className="w-5! h-5!" />,
 								},
-								{
-									name: "Behance",
-									href: "https://www.behance.net/vineshstudio",
-									icon: <FaBehance className="w-5! h-5!" />,
-								},
+								// {
+								// 	name: "Behance",
+								// 	href: "https://www.behance.net/vineshstudio",
+								// 	icon: <FaBehance className="w-5! h-5!" />,
+								// },
 							].map(({ name, href, icon }) => (
 								<a
 									key={name}
@@ -104,7 +104,7 @@ export default function Footer() {
 					WebkitTextStroke: "1px rgba(242,237,230,0.2)",
 				}}
 			>
-				Vinesh
+				VichuStudio
 			</div>
 		</footer>
 	);

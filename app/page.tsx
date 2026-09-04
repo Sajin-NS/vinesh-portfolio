@@ -177,8 +177,8 @@ export default function Home() {
 								{/* Brand / Capability Grid */}
 								<div className="mt-14! rounded-2xl! border! border-[rgba(242,237,230,0.12)]! bg-[#121720]/80! backdrop-blur-md! overflow-hidden! grid! grid-cols-2! sm:grid-cols-3! lg:grid-cols-6!">
 									{[
-										"SOSOCIAL",
 										"CAPITAL MOTION",
+										"SOSOCIAL",
 										"CAFE DEL MAR",
 										"VERSUS",
 										"TIKI PACIFICO",

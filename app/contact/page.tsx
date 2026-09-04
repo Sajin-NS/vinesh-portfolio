@@ -55,7 +55,7 @@ export default function ContactPage() {
 							</div>
 
 							{/* Base Locations */}
-							<div>
+							{/* <div>
 								<h3 className="text-xs! font-bold! tracking-widest! uppercase! text-white/40! mb-2!">
 									Location Base
 								</h3>
@@ -64,7 +64,7 @@ export default function ContactPage() {
 									<br />
 									India · Kerala
 								</p>
-							</div>
+							</div> */}
 
 							{/* Response time */}
 							<div>
