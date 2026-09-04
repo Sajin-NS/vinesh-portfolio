@@ -10,25 +10,25 @@ export default function LogoGallery() {
 	const logos = [
 		{
 			id: 1,
-			src: "/logo/img1.jpg",
+			src: "/logo/img1.webp",
 			title: "Identity Mark 1",
 			desc: "Selected logo work & brand system",
 		},
 		{
 			id: 2,
-			src: "/logo/img2.jpg",
+			src: "/logo/img2.webp",
 			title: "Identity Mark 2",
 			desc: "Selected logo work & brand system",
 		},
 		{
 			id: 3,
-			src: "/logo/img3.jpg",
+			src: "/logo/img3.webp",
 			title: "Identity Mark 3",
 			desc: "Selected logo work & brand system",
 		},
 		{
 			id: 4,
-			src: "/logo/img4.jpg",
+			src: "/logo/img4.webp",
 			title: "Identity Mark 4",
 			desc: "Selected logo work & brand system",
 		},
@@ -140,6 +140,30 @@ export default function LogoGallery() {
 			title: "Identity Mark 22",
 			desc: "Selected logo work & brand system",
 		},
+		{
+			id: 23,
+			src: "/logo/img23.jpg",
+			title: "Identity Mark 23",
+			desc: "Selected logo work & brand system",
+		},
+		{
+			id: 24,
+			src: "/logo/img24.jpg",
+			title: "Identity Mark 24",
+			desc: "Selected logo work & brand system",
+		},
+		{
+			id: 25,
+			src: "/logo/img25.jpg",
+			title: "Identity Mark 25",
+			desc: "Selected logo work & brand system",
+		},
+		{
+			id: 26,
+			src: "/logo/img26.jpg",
+			title: "Identity Mark 26",
+			desc: "Selected logo work & brand system",
+		},
 	];
 
 	// Keyboard navigation support
@@ -226,7 +250,9 @@ export default function LogoGallery() {
 							<button
 								onClick={() =>
 									setActiveIndex((prev) =>
-										prev !== null ? (prev - 1 + logos.length) % logos.length : null,
+										prev !== null
+											? (prev - 1 + logos.length) % logos.length
+											: null,
 									)
 								}
 								aria-label="Previous logo"

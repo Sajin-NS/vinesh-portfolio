@@ -91,7 +91,7 @@ export default function Home() {
 					{/* Content */}
 					<div className="relative! z-2! mx-auto! w-full! px-6! md:px-12! grid! grid-cols-1! lg:grid-cols-[1fr_auto]! items-center! gap-10! lg:gap-12!">
 						<div className="flex! flex-col!">
-							<h1 className="text-[clamp(34px,7.5vw,105px)]! font-bold! uppercase! leading-[1.01]! tracking-[0.03em]! text-ink!">
+							<h1 className="text-[clamp(34px,7.5vw,105px)]! font-black! uppercase! leading-[1.01]! tracking-[0.03em]! text-ink!">
 								BUILDING BRANDS
 								<br />
 								FROM
@@ -163,27 +163,59 @@ export default function Home() {
 									and the final presentation working together.
 								</p>
 
-								{/* Brand / Capability Grid */}
-								<div className="mt-14! rounded-2xl! border! border-[rgba(29,29,31,0.08)]! bg-white/80! backdrop-blur-md! overflow-hidden! grid! grid-cols-2! sm:grid-cols-3! lg:grid-cols-6! shadow-xs!">
+								{/* Brand / Logo Grid */}
+								<div className="mt-14! rounded-2xl! border! border-[rgba(29,29,31,0.08)]! bg-white/80! backdrop-blur-md! overflow-hidden! grid! grid-cols-2! sm:grid-cols-4! shadow-xs!">
 									{[
-										"CAPITAL MOTION",
-										"SOSOCIAL",
-										"CAFE DEL MAR",
-										"VERSUS",
-										"TIKI PACIFICO",
-										"BRAND FOLIO",
-										"LINKEDIN CONTENT",
-										"AI VISUALS",
-										"HOSPITALITY DECKS",
-										"LOGO SYSTEMS",
-										"SOCIAL CAMPAIGNS",
-										"APP STORIES",
-									].map((item, idx) => (
+										{
+											id: 1,
+											src: "/home-logo/img1.webp",
+											alt: "Brand Logo 1",
+										},
+										{
+											id: 2,
+											src: "/home-logo/img2.webp",
+											alt: "Brand Logo 2",
+										},
+										{
+											id: 3,
+											src: "/home-logo/img3.webp",
+											alt: "Brand Logo 3",
+										},
+										{
+											id: 4,
+											src: "/home-logo/img4.webp",
+											alt: "Brand Logo 4",
+										},
+										{
+											id: 5,
+											src: "/home-logo/img5.webp",
+											alt: "Brand Logo 5",
+										},
+										{
+											id: 6,
+											src: "/home-logo/img6.webp",
+											alt: "Brand Logo 6",
+										},
+										{
+											id: 7,
+											src: "/home-logo/img7.webp",
+											alt: "Brand Logo 7",
+										},
+										{
+											id: 8,
+											src: "/home-logo/img8.webp",
+											alt: "Brand Logo 8",
+										},
+									].map((logo) => (
 										<div
-											key={idx}
-											className="p-6! text-center! text-xs! sm:text-sm! font-extrabold! tracking-wider! text-ink! border-b! border-r! border-[rgba(29,29,31,0.06)]! hover:bg-accent/10! hover:text-accent! transition-colors! duration-300! flex! items-center! justify-center! min-h-[90px]!"
+											key={logo.id}
+											className="p-6! sm:p-8! text-center! border-b! border-r! border-[rgba(29,29,31,0.06)]! hover:bg-accent/5! transition-all! duration-300! flex! items-center! justify-center! min-h-[110px]! group!"
 										>
-											{item}
+											<img
+												src={logo.src}
+												alt={logo.alt}
+												className="max-h-18! max-w-[130px]! w-auto! h-auto! object-contain! transition-transform! duration-300! group-hover:scale-105!"
+											/>
 										</div>
 									))}
 								</div>
