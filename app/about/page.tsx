@@ -24,7 +24,8 @@ const STORY = [
 					something feel right.
 				</p>
 				<p className="mt-4!">
-					But making brands look better eventually led to a bigger question:
+					But making brands look better eventually led to a bigger
+					question:
 					<br />
 					<span className="font-bold! text-ink!">
 						Can design make them work better too?
@@ -46,13 +47,19 @@ const STORY = [
 					brands taught me that creativity doesn&apos;t live in isolation.
 				</p>
 				<p className="mt-4! space-y-1!">
-					<span className="block!">A beautiful campaign means little if nobody remembers it.</span>
-					<span className="block!">A great website means little if nobody uses it.</span>
-					<span className="block!">And marketing means little if it doesn&apos;t move people.</span>
+					<span className="block!">
+						A beautiful campaign means little if nobody remembers it.
+					</span>
+					<span className="block!">
+						A great website means little if nobody uses it.
+					</span>
+					<span className="block!">
+						And marketing means little if it doesn&apos;t move people.
+					</span>
 				</p>
 				<p className="mt-4! text-ink! font-medium!">
-					So I learned to connect the dots — between brand, content, digital,
-					technology and business.
+					So I learned to connect the dots — between brand, content,
+					digital, technology and business.
 				</p>
 			</>
 		),
@@ -64,12 +71,10 @@ const STORY = [
 			<>
 				<p>
 					I work across creative direction, campaigns, brand systems,
-					digital experiences and AI-assisted production — moving comfortably
-					between the idea and the execution.
+					digital experiences and AI-assisted production — moving
+					comfortably between the idea and the execution.
 				</p>
-				<p className="mt-4!">
-					I still care deeply about how things look.
-				</p>
+				<p className="mt-4!">I still care deeply about how things look.</p>
 				<p className="mt-2! text-ink! font-semibold!">
 					I just care equally about why they exist, how they work and what
 					happens after people see them.
@@ -118,22 +123,27 @@ export default function AboutPage() {
 
 				{/* ── INSIGHT ── */}
 				<FadeInSection>
-					<div className={`border-b! ${BORDER} py-28! md:py-36! px-6! md:px-10!`}>
+					<div
+						className={`border-b! ${BORDER} py-28! md:py-36! px-6! md:px-10!`}
+					>
 						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
 							<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! pt-2!">
 								Insight
 							</span>
 							<div>
 								<h2 className="text-[clamp(32px,5vw,72px)]! font-extrabold! leading-[0.95]! tracking-[-0.03em]! text-ink! mb-8!">
-									<span className="text-accent!">Good creative gets attention.</span>
+									<span className="text-accent!">
+										Good creative gets attention.
+									</span>
 									<br />
 									Great creative knows what to do with it.
 								</h2>
 								<div className="text-[clamp(18px,2.2vw,26px)]! font-medium! leading-[1.45]! text-ink/80! max-w-3xl! space-y-5!">
 									<p>
-										I work at the intersection of design, marketing and
-										technology — understanding the brand, the audience and the
-										business problem before deciding what needs to be made.
+										I work at the intersection of design, marketing
+										and technology — understanding the brand, the
+										audience and the business problem before deciding
+										what needs to be made.
 									</p>
 									<div className="space-y-1.5! text-ink/90! font-semibold! pt-2!">
 										<p>Sometimes that&apos;s a campaign.</p>
@@ -151,21 +161,27 @@ export default function AboutPage() {
 
 				{/* ── PHILOSOPHY ── */}
 				<FadeInSection>
-					<div className={`border-b! ${BORDER} py-28! md:py-36! px-6! md:px-10!`}>
+					<div
+						className={`border-b! ${BORDER} py-28! md:py-36! px-6! md:px-10!`}
+					>
 						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! items-start!">
 							<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! pt-2!">
 								Philosophy
 							</span>
 							<div>
 								<p className="text-[clamp(28px,4.2vw,58px)]! font-extrabold! tracking-[-0.03em]! text-ink! leading-[1.12]! mb-8!">
-									I don&apos;t believe in making things just because they look good.
+									I don&apos;t believe in making things just because
+									they look good.
 									<br />
 									<span className="text-accent!">
-										Every colour, frame, word and interaction should have a reason to exist.
+										Every colour, frame, word and interaction should
+										have a reason to exist.
 									</span>
 								</p>
 								<p className="text-[clamp(18px,2vw,24px)]! font-medium! text-ink/70! leading-[1.5]! max-w-2xl!">
-									My process is simple: understand the brand, understand the people, find the idea — then make it beautifully.
+									My process is simple: understand the brand,
+									understand the people, find the idea — then make it
+									beautifully.
 								</p>
 							</div>
 						</div>
@@ -239,10 +255,11 @@ export default function AboutPage() {
 				<FadeInSection>
 					<div className="py-28! md:py-36! px-6! md:px-10! text-center! max-w-4xl! mx-auto!">
 						<p className="text-[clamp(18px,2.2vw,26px)]! font-bold! text-ink/80! leading-[1.4]! mb-4!">
-							16+ years of making, learning, experimenting and occasionally questioning everything.
+							16+ years of making, learning, experimenting and
+							occasionally questioning everything.
 						</p>
 						<p className="text-base! md:text-lg! text-ink/60! font-semibold! tracking-wide! mb-12!">
-							Based in India. Working with brands anywhere.
+							Based in UAE. Working with brands anywhere.
 						</p>
 
 						<h3 className="text-[clamp(32px,5vw,68px)]! font-black! tracking-[-0.03em]! text-ink! leading-[1.05]! mb-10!">

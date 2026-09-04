@@ -71,7 +71,7 @@ export default function Home() {
 
 			<main>
 				{/* ── HERO ── */}
-				<section className="relative! min-h-screen! flex! flex-col! justify-center! overflow-hidden! pt-28! pb-16!">
+				<section className="relative! min-h-screen! flex! flex-col! justify-between! overflow-hidden! pt-28! pb-0!">
 					{/* <video
 						src="/common/loader_logo.mp4"
 						autoPlay
@@ -89,25 +89,21 @@ export default function Home() {
 					<div className="absolute! inset-0! bg-linear-to-b! from-[rgba(245,245,247,0.35)]! via-[rgba(245,245,247,0.75)]! to-[rgba(245,245,247,0.98)]! z-1!" />
 
 					{/* Content */}
-					<div className="relative! z-2! mx-auto! w-full! px-6! md:px-12! grid! grid-cols-1! lg:grid-cols-[1fr_auto]! items-center! gap-10! lg:gap-12!">
+					<div className="relative! z-2! mx-auto! w-full! max-w-360! px-6! md:px-12! my-auto! py-12! grid! grid-cols-1! lg:grid-cols-[1fr_auto]! items-center! gap-10! lg:gap-12!">
 						<div className="flex! flex-col!">
 							<h1 className="text-[clamp(34px,7.5vw,105px)]! font-black! uppercase! leading-[1.01]! tracking-[0.03em]! text-ink!">
-								BUILDING BRANDS
-								<br />
-								FROM
+								DESIGN THE
 								<span className="font-serif-italic text-accent! lowercase inline-block! mx-3! sm:mx-4! px-1! text-[1.12em]! align-baseline! relative! -top-[0.04em]! tracking-normal!">
-									idea
+									idea.
 								</span>
-								TO
 								<br />
-								IMPACT
+								BUILD THE IMPACT.
 							</h1>
 
 							<p className="text-[clamp(16px,1.8vw,21px)]! text-ink/70! font-medium! leading-[1.45]! mt-8! max-w-xl!">
-								I shape brand identities, campaign visuals, social
-								systems, pitch decks, and AI-powered creative direction
-								for hospitality, lifestyle, and digital-first
-								businesses.
+								Creative direction, brand systems, campaigns and digital
+								experiences — built to look sharp, communicate clearly
+								and move people.
 							</p>
 
 							<div className="flex! flex-wrap! items-center! gap-4! mt-8!">
@@ -130,6 +126,63 @@ export default function Home() {
 						{/* <div className="w-full! lg:w-auto!">
 							<HeroCards />
 						</div> */}
+					</div>
+
+					{/* ── METRICS / PROOF STRIP (Inside Hero) ── */}
+					<div
+						className={`relative! z-2! w-full! border-t! ${BORDER} bg-white/60! backdrop-blur-md!`}
+					>
+						<div className="max-w-360! mx-auto! px-6! md:px-12! grid! grid-cols-2! md:grid-cols-3! lg:grid-cols-[auto_auto_auto_1fr_auto]! gap-6! lg:gap-0! py-5! lg:py-0! lg:divide-x! divide-[rgba(29,29,31,0.08)]!">
+							{/* Col 1: 16+ */}
+							<div className="flex! flex-col! justify-center! lg:py-5! lg:pr-8!">
+								<span className="text-2xl! sm:text-3xl! font-black! text-ink! tracking-tight!">
+									16+
+								</span>
+								<span className="text-[10px]! sm:text-[11px]! font-bold! text-ink/50! tracking-[0.15em]! uppercase! mt-0.5!">
+									YEARS EXPERIENCE
+								</span>
+							</div>
+
+							{/* Col 2: 30+ */}
+							<div className="flex! flex-col! justify-center! lg:py-5! lg:px-8!">
+								<span className="text-2xl! sm:text-3xl! font-black! text-ink! tracking-tight!">
+									30+
+								</span>
+								<span className="text-[10px]! sm:text-[11px]! font-bold! text-ink/50! tracking-[0.15em]! uppercase! mt-0.5!">
+									BRANDS
+								</span>
+							</div>
+
+							{/* Col 3: UAE + INDIA */}
+							<div className="flex! flex-col! justify-center! lg:py-5! lg:px-8!">
+								<span className="text-base! sm:text-lg! font-black! text-ink! tracking-tight! uppercase!">
+									UAE + INDIA
+								</span>
+								<span className="text-[10px]! sm:text-[11px]! font-bold! text-ink/50! tracking-[0.15em]! uppercase! mt-0.5!">
+									MARKETS
+								</span>
+							</div>
+
+							{/* Col 4: FOCUS AREAS */}
+							<div className="col-span-2! md:col-span-3! lg:col-span-1! flex! flex-col! justify-center! lg:py-5! lg:px-8!">
+								<span className="text-xs! sm:text-sm! font-black! text-ink! tracking-tight! uppercase!">
+									HOSPITALITY · LIFESTYLE · F&amp;B · DIGITAL
+								</span>
+								<span className="text-[10px]! sm:text-[11px]! font-bold! text-ink/50! tracking-[0.15em]! uppercase! mt-0.5!">
+									FOCUS AREAS
+								</span>
+							</div>
+
+							{/* Col 5: Location */}
+							<div className="col-span-2! md:col-span-3! lg:col-span-1! flex! flex-col! justify-center! lg:py-5! lg:pl-8! lg:text-right!">
+								<span className="text-[11px]! sm:text-[12px]! font-black! text-ink! tracking-[0.12em]! uppercase!">
+									BASED IN UAE.
+								</span>
+								<span className="text-[10px]! sm:text-[11px]! font-bold! text-ink/50! tracking-[0.12em]! uppercase! mt-0.5!">
+									WORKING WORLDWIDE.
+								</span>
+							</div>
+						</div>
 					</div>
 				</section>
 
@@ -158,9 +211,9 @@ export default function Home() {
 								</h2>
 
 								<p className="text-[clamp(18px,2.2vw,24px)]! text-ink/70! font-medium! leading-[1.4]! mt-8! max-w-2xl!">
-									I help brands move from basic visuals to a sharper
-									creative system — the idea, the look, the content,
-									and the final presentation working together.
+									I connect the idea, the look, the message and the
+									experience — so the brand feels like one brand
+									everywhere.
 								</p>
 
 								{/* Brand / Logo Grid */}
@@ -320,28 +373,61 @@ export default function Home() {
 					</div>
 				</FadeInSection> */}
 
-				{/* ── WHY I'M DIFFERENT ── */}
+				{/* ── MY APPROACH ── */}
 				<FadeInSection>
 					<div
-						className={`border-b! ${BORDER} relative! overflow-hidden!`}
+						className={`border-b! ${BORDER} py-24! md:py-32! px-6! md:px-15! relative! overflow-hidden!`}
 					>
-						<h2 className="text-[clamp(30px,8.5vw,110px)]! font-extrabold! leading-[0.85]! tracking-[-0.03em]! capitalize! text-accent! px-6! md:px-15! pt-14! relative! z-1!">
-							My approach
-						</h2>
+						<div className="absolute! top-0! left-1/2! -translate-x-1/2! w-95! h-full! bg-[radial-gradient(ellipse_at_center_top,rgba(224,90,68,0.1)_0%,transparent_70%)]! z-0! pointer-events-none!" />
 
-						<div className="absolute! top-0! left-1/2! -translate-x-1/2! w-95! h-full! bg-[radial-gradient(ellipse_at_center_top,rgba(224,90,68,0.12)_0%,transparent_70%)]! z-2! pointer-events-none!" />
-
-						<div className="relative! z-3! mx-auto! px-6! md:px-15! pb-24! pt-14! grid! grid-cols-1! gap-10! items-start!">
-							{/* <span className="text-xl! font-semibold! text-white/50! tracking-[0.06em]!">
+						<div className="max-w-360! mx-auto! grid! grid-cols-1! md:grid-cols-[260px_1fr]! gap-10! relative! z-1!">
+							<span className="text-xl! font-semibold! text-ink/60! tracking-[0.06em]! pt-2!">
 								My approach
-							</span> */}
-							<p className="text-[clamp(32px,4.5vw,64px)]! font-extrabold! tracking-[-0.03em]! text-ink! leading-[1.1]!">
-								I approach creative marketing as{" "}
-								<span className="text-accent!">applied psychology</span>{" "}
-								— understanding exactly what audiences need to believe,
-								then crafting comprehensive brand experiences that
-								deliver those outcomes and drive business results.
-							</p>
+							</span>
+
+							<div>
+								<h2 className="text-[clamp(28px,4.5vw,56px)]! font-black! tracking-[-0.03em]! text-ink! leading-[1.1]! mb-10!">
+									Before I design anything,
+									<br />I want to know{" "}
+									<span className="text-accent!">three things:</span>
+								</h2>
+
+								{/* 3 Questions Grid */}
+								<div className="grid! grid-cols-1! md:grid-cols-3! gap-4! sm:gap-6! mb-10!">
+									{[
+										{ num: "01", question: "Who are we talking to?" },
+										{ num: "02", question: "What should they feel?" },
+										{
+											num: "03",
+											question: "What should they do next?",
+										},
+									].map((item) => (
+										<div
+											key={item.num}
+											className="p-6! sm:p-7! rounded-2xl! border! border-[rgba(29,29,31,0.08)]! bg-white/80! backdrop-blur-md! shadow-xs! flex! flex-col! justify-between! gap-4! hover:border-accent/40! transition-colors! duration-300!"
+										>
+											<span className="text-xs! font-bold! text-accent! tracking-[0.1em]!">
+												{item.num}
+											</span>
+											<p className="text-lg! sm:text-xl! font-extrabold! text-ink! leading-[1.3]!">
+												{item.question}
+											</p>
+										</div>
+									))}
+								</div>
+
+								{/* Bottom summary text */}
+								<div className="text-[clamp(18px,2.2vw,26px)]! font-medium! text-ink/80! leading-[1.5]! space-y-3! max-w-3xl!">
+									<p className="text-ink! font-semibold!">
+										Once that is clear, the creative becomes much
+										easier.
+									</p>
+									<p className="text-ink/70!">
+										I build from there — the idea, the visual
+										language, the content and the experience.
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</FadeInSection>
