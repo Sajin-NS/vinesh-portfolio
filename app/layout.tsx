@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Barlow, Instrument_Serif } from "next/font/google";
+import { Barlow, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./components/smooth-scroll";
 import Preloader from "./components/preloader";
@@ -12,11 +12,10 @@ const barlow = Barlow({
   display: "swap",
 });
 
-const instrumentSerif = Instrument_Serif({
+const dancingScript = Dancing_Script({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["400"],
-  style: ["italic", "normal"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -33,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${barlow.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={`${barlow.variable} ${dancingScript.variable}`}>
       <body className="min-h-full">
         <Preloader />
         <SmoothScroll />

@@ -124,7 +124,7 @@ function WordWrapper({ word, index, activeIndexTransform }: WordWrapperProps) {
 	return (
 		<motion.span
 			animate={{
-				color: active ? "#e05a44" : "rgba(29, 29, 31, 0.45)",
+				color: active ? "#e05a44" : "#808080",
 			}}
 			transition={{ duration: 0.25, ease: "easeOut" }}
 			className="inline-block! transition-colors!"

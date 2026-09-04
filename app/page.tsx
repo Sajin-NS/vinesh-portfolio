@@ -27,11 +27,10 @@ const TESTIMONIALS = [
 	{
 		quote: (
 			<>
-				An{" "}
-				<span className="text-accent!">exceptional professional</span> whose
-				creativity, leadership, and ability to handle complex projects set
-				him apart. He consistently delivers outstanding results and inspires
-				those around him.
+				An <span className="text-accent!">exceptional professional</span>{" "}
+				whose creativity, leadership, and ability to handle complex projects
+				set him apart. He consistently delivers outstanding results and
+				inspires those around him.
 			</>
 		),
 		name: "Julio Rafael",
@@ -92,13 +91,13 @@ export default function Home() {
 					{/* Content */}
 					<div className="relative! z-2! mx-auto! w-full! px-6! md:px-12! grid! grid-cols-1! lg:grid-cols-[1fr_auto]! items-center! gap-10! lg:gap-12!">
 						<div className="flex! flex-col!">
-							<h1 className="text-[clamp(44px,7.5vw,105px)]! font-black! uppercase! leading-[0.88]! tracking-[-0.03em]! text-ink!">
+							<h1 className="text-[clamp(34px,7.5vw,105px)]! font-bold! uppercase! leading-[1.01]! tracking-[0.03em]! text-ink!">
 								BUILDING BRANDS
 								<br />
-								FROM{" "}
-								<span className="font-serif-italic! italic text-accent! lowercase">
+								FROM
+								<span className="font-serif-italic text-accent! lowercase inline-block! mx-3! sm:mx-4! px-1! text-[1.12em]! align-baseline! relative! -top-[0.04em]! tracking-normal!">
 									idea
-								</span>{" "}
+								</span>
 								TO
 								<br />
 								IMPACT
@@ -153,7 +152,7 @@ export default function Home() {
 									<br />
 									DESIGN.
 									<br />
-									<span className="font-serif-italic text-accent capitalize">
+									<span className="font-serif-italic text-accent capitalize inline-block px-1! text-[1.1em]!">
 										Direction.
 									</span>
 								</h2>
