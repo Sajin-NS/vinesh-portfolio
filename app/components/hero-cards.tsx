@@ -22,7 +22,8 @@ const CARDS: CardData[] = [
 			"linear-gradient(145deg, rgba(74, 38, 21, 0.95) 0%, rgba(163, 82, 44, 0.85) 50%, rgba(224, 122, 72, 0.75) 100%)",
 		glowColor: "rgba(224, 122, 72, 0.35)",
 		rotation: 6,
-		className: "w-[200px] sm:w-[245px] h-[190px] sm:h-[235px] top-0 right-0 sm:right-2",
+		className:
+			"w-[200px] sm:w-[245px] h-[190px] sm:h-[235px] top-0 right-0 sm:right-2",
 		zIndex: 10,
 		delay: 0.1,
 	},
@@ -33,7 +34,8 @@ const CARDS: CardData[] = [
 			"linear-gradient(145deg, rgba(17, 34, 51, 0.95) 0%, rgba(32, 58, 86, 0.9) 50%, rgba(58, 93, 132, 0.8) 100%)",
 		glowColor: "rgba(58, 93, 132, 0.4)",
 		rotation: -7,
-		className: "w-[175px] sm:w-[210px] h-[165px] sm:h-[195px] top-12 sm:top-14 left-0 sm:left-2",
+		className:
+			"w-[175px] sm:w-[210px] h-[165px] sm:h-[195px] top-12 sm:top-14 left-0 sm:left-2",
 		zIndex: 20,
 		delay: 0.2,
 	},
@@ -44,7 +46,8 @@ const CARDS: CardData[] = [
 			"linear-gradient(145deg, rgba(15, 36, 26, 0.95) 0%, rgba(40, 79, 58, 0.88) 50%, rgba(76, 124, 96, 0.78) 100%)",
 		glowColor: "rgba(76, 124, 96, 0.35)",
 		rotation: 3,
-		className: "w-[195px] sm:w-[235px] h-[185px] sm:h-[220px] bottom-4 sm:bottom-6 right-2 sm:right-4",
+		className:
+			"w-[195px] sm:w-[235px] h-[185px] sm:h-[220px] bottom-4 sm:bottom-6 right-2 sm:right-4",
 		zIndex: 15,
 		delay: 0.3,
 	},
@@ -55,7 +58,8 @@ const CARDS: CardData[] = [
 			"linear-gradient(145deg, rgba(59, 28, 18, 0.95) 0%, rgba(140, 67, 34, 0.88) 50%, rgba(196, 104, 53, 0.78) 100%)",
 		glowColor: "rgba(196, 104, 53, 0.35)",
 		rotation: 7,
-		className: "w-[165px] sm:w-[195px] h-[155px] sm:h-[185px] bottom-0 left-4 sm:left-8",
+		className:
+			"w-[165px] sm:w-[195px] h-[155px] sm:h-[185px] bottom-0 left-4 sm:left-8",
 		zIndex: 30,
 		delay: 0.4,
 	},
@@ -117,4 +121,3 @@ export default function HeroCards() {
 		</div>
 	);
 }
-
